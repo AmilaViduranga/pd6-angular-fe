@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="input-group" id="adv-search">
+    <input type="text" class="form-control" placeholder="Search by NIC/ Pension number" />
+    <div class="input-group-btn">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-primary">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <table class="table table-striped" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5">
+    <thead>
+    <tr>
+      <th style="width: 25%">
+        <mfDefaultSorter by="name">NIC</mfDefaultSorter>
+      </th>
+      <th style="width: 25%">
+        <mfDefaultSorter by="email">Pension Number</mfDefaultSorter>
+      </th>
+      <th style="width: 25%">
+        <mfDefaultSorter by="age">Name</mfDefaultSorter>
+      </th>
+      <th style="width: 25%">
+        <mfDefaultSorter by="city">Options</mfDefaultSorter>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of mf.data">
+      <td>{{item.name}}</td>
+      <td>{{item.email}}</td>
+      <td class="text-right">{{item.age}}</td>
+      <td>{{item.city | uppercase}}</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <td colspan="4">
+        <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+      </td>
+    </tr>
+    </tfoot>
+  </table>
+</div>

@@ -1,0 +1,19 @@
+<!-- navigation top bar -->
+<ul>
+  <li><span style="font-size:30px;cursor:pointer; color: white;" (click)="openNav()">&#9776;</span></li>
+  <li><a routerLink="/dashboard">PMS REVISION</a></li>
+  <li style="float:right"><a class="active" href="#about">Logout</a></li>
+</ul>
+
+<!-- side bar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <a href="#">
+    <i class="fa fa-plus" aria-hidden="true"></i>
+    New Application
+  </a>
+  <a href="#">
+    <i class="fa fa-print" aria-hidden="true"></i>
+    Award Letter Print
+  </a>
+</div>
