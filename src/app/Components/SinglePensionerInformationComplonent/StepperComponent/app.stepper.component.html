@@ -1,0 +1,73 @@
+<div class="mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__supporting-text">
+    <div class="mdl-stepper-horizontal-alternative">
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active">
+            <a class="mdl-stepper-step active-step" id="icopersonal" (click)="loadContent('personal', 'icopersonal')">
+              <div class="mdl-stepper-circle"><span><i class="fa fa-user" aria-hidden="true"></i></span></div>
+              <div class="mdl-stepper-title">
+                Personal Information
+              </div>
+              <div class="mdl-stepper-bar-right"></div>
+            </a>
+          </li>
+          <li role="presentation">
+            <a class="mdl-stepper-step active-step" id="icoserviceInfo" (click)="loadContent('serviceInfo', 'icoserviceInfo')">
+              <div class="mdl-stepper-circle"><span><i class="fa fa-building" aria-hidden="true"></i></span></div>
+              <div class="mdl-stepper-title">Service Information</div>
+              <div class="mdl-stepper-bar-left"></div>
+              <div class="mdl-stepper-bar-right"></div>
+            </a>
+          </li>
+          <li role="presentation">
+            <a class="mdl-stepper-step active-step"  id="icobankInfo" aria-controls="bankInfo" (click)="loadContent('bankInfo', 'icobankInfo')">
+              <div class="mdl-stepper-circle"><span><i class="fa fa-usd" aria-hidden="true"></i></span></div>
+              <div class="mdl-stepper-title">Bank Information</div>
+              <div class="mdl-stepper-bar-left"></div>
+              <div class="mdl-stepper-bar-right"></div>
+            </a>
+          </li>
+          <li role="presentation">
+            <a class="mdl-stepper-step active-step" id="icorevisionInfo" (click)="loadContent('revisionInfo', 'icorevisionInfo')">
+              <div class="mdl-stepper-circle"><span><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span></div>
+              <div class="mdl-stepper-title">Salary Revision Information</div>
+              <div class="mdl-stepper-bar-left"></div>
+              <div class="mdl-stepper-bar-right"></div>
+            </a>
+          </li>
+          <li role="presentation">
+            <a class="mdl-stepper-step active-step" id="icopaymentInfo" (click)="loadContent('paymentInfo', 'icopaymentInfo')">
+              <div class="mdl-stepper-circle"><span><i class="fa fa-money" aria-hidden="true"></i></span></div>
+              <div class="mdl-stepper-title">Payment Information</div>
+              <div class="mdl-stepper-bar-left"></div>
+            </a>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10">
+    <!-- contents load here -->
+    <div id="my-tab-content" class="tab-content">
+      <div class="tab-pane infoContents active" id="personal">
+        <app-personal></app-personal>
+      </div>
+      <div class="tab-pane infoContents" id="serviceInfo" style="display:none">
+        <app-service-info></app-service-info>
+      </div>
+      <div class="tab-pane infoContents" id="bankInfo" style="display:none">
+        <app-bank-info></app-bank-info>
+      </div>
+      <div class="tab-pane infoContents" id="revisionInfo" style="display:none">
+        <app-salary-revision-info></app-salary-revision-info>
+      </div>
+      <div class="tab-pane infoContents" id="paymentInfo" style="display:none">
+        payment data load here
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-1"></div>
+</div>
+

@@ -8,6 +8,9 @@ import { PendingApplicationPensionersComponent } from '../Components/PensionersI
 import { RejectedApplicationPensionersComponent } from '../Components/PensionersInformationComponent/RegectedApplicationComponent/app.rejected.application.component';
 import { SubmittedApplicationPensionersComponent } from '../Components/PensionersInformationComponent/SubmittedApplicationComponent/app.submited.application.component';
 import { AwardApplicationPensionersComponent } from '../Components/PensionersInformationComponent/PendingAwardApplicationComponent/app.pending.award.component';
+import { PersonalInformationComponent } from '../Components/SinglePensionerInformationComplonent/PersonalInformationComponent/app.personalInformation.component';
+import { StepperComponent } from '../Components/SinglePensionerInformationComplonent/StepperComponent/app.stepper.component';
+
 export const AppRoutes: Routes = [
   {
     path: 'dashboard',
@@ -37,5 +40,9 @@ export const AppRoutes: Routes = [
   {
     path: 'pensionersInformation/awarded',
     component: AwardApplicationPensionersComponent
+  },
+  {
+    path: 'singleInformation',
+    component: StepperComponent
   }
 ]

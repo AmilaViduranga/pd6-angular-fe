@@ -1,16 +1,84 @@
-<h1>Personal Information</h1>
-<div class="row">
-  <div class="col-sm-1"></div>
-  <div class="col-sm-10">
-    <div class="col-sm-9"></div>
-    <div class="col-sm-3 apply-borders"></div>
+<form class="card">
+  <div class="card-block">
+    <div class="row">
+      <div class="col-sm-10">
+        <h3><i class="fa fa-user" aria-hidden="true"></i> Personal Information</h3>
+      </div>
+      <div class="col-sm-2 apply-borders">
+        <!-- display profile picturer of users -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="nameInFul">Name in Full</label>
+      <input type="text" class="form-control" id="nameInFul"  placeholder="Enter full name">
+    </div>
+    <div class="form-group">
+      <label for="prefferedName">Preferred Name</label>
+      <input type="text" class="form-control" id="prefferedName" aria-describedby="emailHelp" placeholder="Enter preffered name">
+    </div>
+    <div class="form-group">
+      <label for="DateOfBirth">Date Of Birth</label>
+      <input type="date" class="form-control" id="DateOfBirth"  placeholder="date of birth">
+    </div>
+    <div class="form-group">
+      <label for="nic">NIC</label>
+      <input type="text" class="form-control" id="nic"  placeholder="NIC no">
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender</label><br>
+      <label class="radio-inline"><input type="radio" name="gender">Male</label>&nbsp;
+      <label class="radio-inline"><input type="radio" name="gender">Female</label>
+    </div>
+    <div class="form-group">
+      <label for="dist">District</label>
+      <select class="form-control" id="dist">
+        <option>test1</option>
+        <option>test2</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="ds">DS Division</label>
+      <select class="form-control" id="ds">
+        <option>test1</option>
+        <option>test2</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="gndivision">GN Division</label>
+      <input type="text" class="form-control" id="gndivision"  placeholder="GN Division">
+    </div>
+    <div class="form-group">
+      <label>Permenent address</label>
+      <input type="text" class="form-control" id="address1"  placeholder="Address Line 1"><br>
+      <input type="text" class="form-control" id="address2"  placeholder="Address Line 2"><br>
+      <input type="text" class="form-control" id="address3"  placeholder="Address Line 3">
+    </div>
+    <div class="form-group">
+      <label for="gndivision">Telephone</label>
+      <div class="row">
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="residance"  placeholder="Residance">
+        </div>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="mobile"  placeholder="Mobile">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8"></div>
+      <div class="col-sm-4">
+        <div class="btn-group pull-right">
+          <button type="button" class="btn btn-primary">
+            <i class="fa fa-pencil"></i>
+            Edit
+          </button>
+          <button type="button" class="btn btn-success">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-sm-1"></div>
-</div>
-<div class="row">
-  <div class="col-sm-1"></div>
-  <div class="col-sm-10">
-    
-  </div>
-  <div class="col-sm-1"></div>
-</div>
+</form>
+

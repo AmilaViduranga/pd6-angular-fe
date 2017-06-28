@@ -5,15 +5,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 /*
  * component register for single person information
  */
 import { PersonalInformationComponent } from './PersonalInformationComponent/app.personalInformation.component';
+import { StepperComponent } from './StepperComponent/app.stepper.component';
+import { ServiceInformationComponent } from './ServiceInformationComponent/app.service.information.component';
+import { BankInformationComponent } from './BankInformationComponent/app.bank.information.component';
+import { SalaryRevisionInformationComponent } from './SalaryRevisionInformationComponent/app.salary.revision.information.component';
+
 @NgModule({
   declarations: [
-    PersonalInformationComponent
+    PersonalInformationComponent,
+    ServiceInformationComponent,
+    StepperComponent,
+    BankInformationComponent,
+    SalaryRevisionInformationComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +32,7 @@ import { PersonalInformationComponent } from './PersonalInformationComponent/app
   providers: [],
   bootstrap: [],
   exports: [
-    PersonalInformationComponent
+    StepperComponent
   ]
 })
 export class SinglePensionInformationModule { }
