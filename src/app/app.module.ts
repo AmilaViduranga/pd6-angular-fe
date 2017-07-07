@@ -21,7 +21,18 @@ import { LoginComponent } from './Components/LoginComponent/app.login.component'
 /*
  * import routes
  */
-import {AppRoutes} from './Routes/app.routes.definition';
+import { AppRoutes } from './Routes/app.routes.definition';
+
+/*
+ * import data model
+ */
+import { ServerAddresses } from './Models/app.model.data.serverAddresses';
+
+/*
+ * import the services
+ */
+import { BaseService } from './Services/app.base.service';
+import { LoginService } from './Services/app.login.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +52,11 @@ import {AppRoutes} from './Routes/app.routes.definition';
     PensionersInformationsModule,
     RouterModule.forRoot(AppRoutes)
   ],
-  providers: [],
+  providers: [
+    ServerAddresses,
+    BaseService,
+    LoginService
+  ],
   bootstrap: [AppComponent],
   exports: [
     RouterModule

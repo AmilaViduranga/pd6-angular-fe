@@ -17,6 +17,17 @@ import { RejectedApplicationPensionersComponent } from './RegectedApplicationCom
 import { SubmittedApplicationPensionersComponent } from './SubmittedApplicationComponent/app.submited.application.component';
 import { AwardApplicationPensionersComponent } from './PendingAwardApplicationComponent/app.pending.award.component';
 
+/*
+ * import data model
+ */
+import { ServerAddresses } from '../../Models/app.model.data.serverAddresses';
+
+/*
+ * import the services
+ */
+import { BaseService } from '../../Services/app.base.service';
+import { PensionersInformationService } from '../../Services/PensionersInformationServices/app.pensioners.information.service';
+
 @NgModule({
   declarations: [
     PensionersSearchComponent,
@@ -32,7 +43,11 @@ import { AwardApplicationPensionersComponent } from './PendingAwardApplicationCo
     NgbModule,
     DataTableModule
   ],
-  providers: [],
+  providers: [
+    ServerAddresses,
+    BaseService,
+    PensionersInformationService
+  ],
   bootstrap: [],
   exports: [
     PendingApplicationPensionersComponent,

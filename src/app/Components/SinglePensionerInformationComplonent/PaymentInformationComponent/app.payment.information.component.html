@@ -1,0 +1,79 @@
+<form class="card">
+  <div class="card-block">
+    <h3><i class="fa fa-money" aria-hidden="true"></i> Payment Information</h3>
+    <span>service period information</span><br>
+    <table class="table">
+      <thead class="thead-inverse">
+        <tr>
+          <th></th>
+          <th>Present Reduced %</th>
+          <th>Present Unreduced %</th>
+          <th>After Reduced %</th>
+          <th>After Unreduced %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let info of serviceInfo">
+          <td>{{info.title}}</td>
+          <td>
+            <input type="number" class="form-control" placeholder="present Reduced">
+          </td>
+          <td>
+            <input type="number" class="form-control" placeholder="present Unreduced">
+          </td>
+          <td>
+            <input type="number" class="form-control" placeholder="After Reduced">
+          </td>
+          <td>
+            <input type="number" class="form-control" placeholder="After Unreduced">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-block">
+    <label><b>Service Period Information</b></label><br>
+    <button class="btn btn-primary">
+      <i class="fa fa-plus"></i>
+      Add Deductions
+    </button><br>
+    <div class="form-group">
+      <label for="totalDeduction">Total Deduction</label>
+      <input type="number" class="form-control" id="totalDeduction"  placeholder="Total deduction">
+    </div>
+  </div>
+  <div class="card-block">
+    <label><b>Gratuity Entitlement</b></label><br>
+    <div class="form-group">
+      <label>Gross Gratuity</label>
+      <input type="number" class="form-control" placeholder="Gross Gratuity">
+    </div>
+    <div class="form-group">
+      <label>Amount Payable to the government</label>
+      <input type="number" class="form-control" placeholder="Amount Payable to the government">
+    </div>
+    <div class="form-group">
+      <label>Net Gratuity</label>
+      <input type="number" class="form-control" placeholder="Net Gratuity">
+    </div>
+  </div>
+  <div class="card-block">
+    <label><b>Monthly Pension Entitlement</b></label><br>
+    <table class="table">
+      <thead class="thead-inverse">
+      <tr>
+        <th></th>
+        <th>Reduced</th>
+        <th>UnReduced</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let info of pensionEntitlement">
+          <td>{{info.title}}</td>
+          <td>{{info.reduced}}</td>
+          <td>{{info.unreduced}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>

@@ -59,14 +59,14 @@
 }
 
 .mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-circle {
-  width: 24px;
-  height: 24px;
+  width: 50px;
+  height: 50px;
   margin: 0 auto;
   background-color: #9E9E9E;
   border-radius: 50%;
   text-align: center;
   line-height: 2em;
-  font-size: 12px;
+  font-size: 25px;
   color: white;
 }
 
@@ -100,7 +100,7 @@
 
 .mdl-stepper-horizontal-alternative .mdl-stepper-step .mdl-stepper-title {
   margin-top: 16px;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: normal;
 }
 
