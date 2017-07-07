@@ -1,13 +1,19 @@
 <!-- navigation top bar -->
-<ul>
-  <li><span style="font-size:30px;cursor:pointer; color: white;" (click)="openNav()">&#9776;</span></li>
-  <li><a routerLink="/dashboard">PMS REVISION</a></li>
-  <li style="float:right"><a class="active" href="#about">Logout</a></li>
-</ul>
+<div class="navbarModified">
+  <ul>
+    <li style="float:right"><a href="#about">Logout</a></li>
+  </ul>
+</div>
 
 <!-- side bar -->
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+<div id="mySidenav" class="sidenav sidenavnew">
+  <!--<a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>-->
+  <a routerLink="/dashboard" class="mainItem">
+    <div class="row" style="text-align: right;">
+        <span style="color: cyan;"><h3>PMS</h3></span> &nbsp;
+        <span style="color: chartreuse;"><h3>REVISION</h3></span>
+    </div>
+  </a>
   <a routerLink="/singleInformation">
     <i class="fa fa-plus" aria-hidden="true"></i>
     New Application

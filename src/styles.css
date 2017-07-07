@@ -1,8 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 .form-back {
-  background-color: lightyellow;
+  background-color: snow;
 }
 
 label {
   font-size: 20px;
+}
+
+td {
+  font-size: 20px;
+}
+
+span {
+  font-size: 20px;
+}
+
+button {
+  cursor: pointer;
 }
