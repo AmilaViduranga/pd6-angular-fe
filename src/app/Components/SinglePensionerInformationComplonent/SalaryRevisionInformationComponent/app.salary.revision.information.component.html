@@ -1,240 +1,279 @@
-<form class="card">
-  <div class="card-block">
-    <h3><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Salary Revision Information</h3>
-    <div class="form-group">
-      <label>Salary Circular & Retirement Year</label>
-      <input type="text" class="form-control"   placeholder="Salary Circular & Retirement Year">
-    </div>
-    <div class="form-group">
-      <label>Last Date of Increment</label>
-      <input type="date" class="form-control"   placeholder="Last Date of Increment">
-    </div>
-    <div class="form-group">
-      <label>Monthly Salary</label>
-      <input type="number" class="form-control"   placeholder="Monthly Salary">
-    </div>
-    <div class="card card-block">
-      <label><b>Service Period Information</b></label>
-      <table class="table">
-        <thead class="thead-inverse">
-          <tr>
-            <th></th>
-            <th></th>
-            <th>Present</th>
-            <th>After Revision</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th role="row">
-              i
-            </th>
-            <td>
-              Trainnig Service period relevant to pension calculation
-            </td>
-            <td>
-              <input type="date" class="form-control">
-            </td>
-            <td>
-              <input type="date" class="form-control">
-            </td>
-            <td>
-              <input type="checkbox">
-            </td>
-          </tr>
-          <tr>
-            <th role="row">
-              ii
-            </th>
-            <td>
-              Casual Daily Period which W&OP contributions were deducted
-            </td>
-            <td>
-              <input type="date" class="form-control">
-            </td>
-            <td>
-              <input type="date" class="form-control">
-            </td>
-            <td>
-              <input type="checkbox">
-            </td>
-          </tr>
-          <tr>
-            <th role="row">
-              iii
-            </th>
-            <td>
-              Permenent and pensionable service period
-            </td>
-            <td>
-              <input type="date" class="form-control">
-            </td>
-            <td>
-              <input type="date" class="form-control">
-            </td>
-            <td>
-              <input type="checkbox">
-            </td>
-          </tr>
-          <tr>
-            <th role="row">
-              iv
-            </th>
-            <td>
-              Total service period relevant to pension calculation
-            </td>
-            <td>
-              <input type="date" class="form-control">
-            </td>
-            <td>
-              <input type="date" class="form-control">
-            </td>
-            <td>
-              <input type="checkbox">
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <br>
-    <div class="card card-block">
-      <label><b>No Pay Leave</b></label>
-      <table class="table">
-        <thead class="thead-inverse">
-        <tr>
-          <th></th>
-          <th></th>
-          <th>Present</th>
-          <th>After Revision</th>
-          <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <th role="row">
-            i
-          </th>
-          <td>
-            Total No Pay Leave period
-          </td>
-          <td>
-            <input type="date" class="form-control">
-          </td>
-          <td>
-            <input type="date" class="form-control">
-          </td>
-          <td>
-            <input type="checkbox">
-          </td>
-        </tr>
-        <tr>
-          <th role="row">
-            ii
-          </th>
-          <td>
-            No - Pay leave set off period
-          </td>
-          <td>
-            <input type="date" class="form-control">
-          </td>
-          <td>
-            <input type="date" class="form-control">
-          </td>
-          <td>
-            <input type="checkbox">
-          </td>
-        </tr>
-        <tr>
-          <th role="row">
-            iii
-          </th>
-          <td>
-            Net No - Pay leave period after setting off above section II
-          </td>
-          <td>
-            <input type="date" class="form-control">
-          </td>
-          <td>
-            <input type="date" class="form-control">
-          </td>
-          <td>
-            <input type="checkbox">
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-    <br>
-    <div class="card card-block">
-      <label><b>Salary Particulars</b></label>
-      <table class="table">
-        <thead class="thead-inverse">
-        <tr>
-          <th>Salary Particulars</th>
-          <th>Present</th>
-          <th>After Revision</th>
-          <th>At 01/01/2020</th>
-          <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <th role="row">
-            Annual Consolidated Salary
-          </th>
-          <td>
-            <input type="date" class="form-control">
-          </td>
-          <td>
-            <input type="date" class="form-control">
-          </td>
-          <td>
-            <input type="date" class="form-control">
-          </td>
-          <td>
-            <input type="checkbox">
-          </td>
-        </tr>
-        <tr>
-          <th role="row">
-            Earned Increment
-          </th>
-          <td>
-            <input type="date" class="form-control">
-          </td>
-          <td>
-            <input type="date" class="form-control">
-          </td>
-          <td>
-            <input type="date" class="form-control">
-          </td>
-          <td>
-            <input type="checkbox">
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </div><br>
-    <button class="btn btn-primary"><i class="fa fa-plus"></i> Add Allowance </button><br>
-    <div class="form-group">
-      <label>Gross Annual Salary</label>
-      <input type="number" class="form-control"   placeholder="Gross Annual Salar">
-    </div>
-    <div class="row">
-      <div class="col-sm-8"></div>
-      <div class="col-sm-4">
-        <div class="btn-group pull-right">
-          <button type="button" class="btn btn-primary">
-            <i class="fa fa-pencil"></i>
-            Edit
-          </button>
-          <button type="button" class="btn btn-success">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            Continue
-          </button>
-        </div>
-      </div>
+<div>
+  <h3>Salary Revision Information</h3>
+
+  <br/>
+  <div class="form-group">
+    <div class="col-sm-1"></div>
+    <label class="control-label col-sm-2" for="salScale">Salary Code</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" placeholder="Salary Code" (keyup)="store.pensionable.salaryCode=$event.srcElement.value"
+      />
     </div>
   </div>
-</form>
+  <br/><br/>
+
+  <div class="form-group">
+    <div class="col-sm-1"></div>
+    <label for="doi" class="control-label col-sm-2">Last Date of Increment</label>
+    <div class=" col-sm-3">
+      <input type="date" class="form-control" placeholder="YYYY-MM-DD" (keyup)="store.pensionable.lastIncrementDate=$event.srcElement.value"
+      />
+    </div>
+  </div>
+  <br/><br/>
+
+  <div class="form-group">
+    <div class="col-sm-1"></div>
+    <label class="control-label col-sm-2" for="txtMonthlySalary">Monthly Salary</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control" style="text-align: right" value="0" (keyup)="get2020Salary($event)" />
+    </div>
+  </div>
+  <br/><br/><br/><br/><br/>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 ">
+      <table id="tblService" class="table table-striped">
+        <tr class="info">
+          <td><label><br/>Details of the Period of Service</label></td>
+          <td class="col-sm-1"><br/>Years</td>
+          <td class="col-sm-1"><b>Presesnt</b><br/>Months</td>
+          <td class="col-sm-1"><br/>Days</td>
+          <td class="col-sm-1"></td>
+          <td class="col-sm-1"><br/>Years</td>
+          <td class="col-sm-1"><b>Revised</b><br/>Months</td>
+          <td class="col-sm-1"><br/>Days</td>
+        </tr>
+        <tr>
+          <td>Period of trained service relevant to the calculation of pension</td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.years=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.months=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.dates=$event.srcElement.value">
+          </td>
+          <td class="col-sm-1"></td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.years=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.months=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.dates=$event.srcElement.value">
+          </td>
+        </tr>
+        <tr>
+          <td>Casual/Daily wages from which W&OP contributions were deducted</td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.years=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.months=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.dates=$event.srcElement.value">
+          </td>
+          <td class="col-sm-1"></td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.years=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.months=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.dates=$event.srcElement.value">
+          </td>
+        </tr>
+        <tr>
+          <td>Permanent and Pensionable</td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.years=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.months=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.dates=$event.srcElement.value">
+          </td>
+          <td class="col-sm-1"></td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.years=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.months=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.dates=$event.srcElement.value">
+          </td>
+        </tr>
+        <tr>
+          <td>Period of service relevant to the calculation of pension</td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.years=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.months=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.dates=$event.srcElement.value">
+          </td>
+          <td class="col-sm-1"></td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.years=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.months=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.trainedPeriod.dates=$event.srcElement.value">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <br/>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 ">
+      <table id="tblNopay" class="table table-striped">
+        <tr class="info">
+          <td><label>No-pay leave details</label></td>
+          <td class="col-sm-1"><br/>Years</td>
+          <td class="col-sm-1"><b>Presesnt</b><br/>Months</td>
+          <td class="col-sm-1"><br/>Days</td>
+          <td class="col-sm-1"></td>
+          <td class="col-sm-1"><br/>Years</td>
+          <td class="col-sm-1"><b>Revised</b><br/>Months</td>
+          <td class="col-sm-1"><br/>Days</td>
+        </tr>
+        <tr>
+          <td>Total No-pay leave period</td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPayleavePeriod.years=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPayleavePeriod.months=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPayleavePeriod.dates=$event.srcElement.value">
+          </td>
+          <td class="col-sm-1"></td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPayleavePeriod.months=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPayleavePeriod.dates=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPayleavePeriod.dates=$event.srcElement.value">
+          </td>
+        </tr>
+        <tr>
+          <td>No-pay leave set off</td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPaySetOff.years=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPaySetOff.months=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPaySetOff.dates=$event.srcElement.value">
+          </td>
+          <td class="col-sm-1"></td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPayleavePeriod.months=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPayleavePeriod.dates=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPayleavePeriod.dates=$event.srcElement.value">
+          </td>
+        </tr>
+        <tr>
+          <td>Net No-pay Leaves after setting off</td>
+          <td>
+            <input type="text" class="form-control" value={{store.pensionable.netNoPay.years}} readonly>
+          </td>
+          <td>
+            <input type="text" class="form-control" value={{store.pensionable.netNoPay.months}} readonly>
+          </td>
+          <td>
+            <input type="text" class="form-control" value={{store.pensionable.netNoPay.dates}} readonly>
+          </td>
+          <td class="col-sm-1"></td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPayleavePeriod.months=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPayleavePeriod.dates=$event.srcElement.value">
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" (keyup)="store.pensionable.noPayleavePeriod.dates=$event.srcElement.value">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <br/>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 ">
+
+      <table class="table table-striped">
+        <tr class="info">
+          <td><label>Salary Particulars</label></td>
+          <td>Present</td>
+          <td>Revised</td>
+          <td>As at 01/01/2020</td>
+        </tr>
+        <tr>
+          <td><label>Annual consolidated salary </label></td>
+          <td class="col-sm-2"><input type="text" class="form-control col-sm-1 money" style="text-align: right" value={{store.pensionable.calculateAnnualSalary}}
+              readonly></td>
+          <td class="col-sm-2"><input type="text" class="form-control col-sm-1 money" style="text-align: right" value={{store.pensionable.annualSalary2020}}
+              readonly></td>
+          <td class="col-sm-2"><input type="text" class="form-control col-sm-1 money" style="text-align: right" value={{store.pensionable.annualSalary2020}}
+              readonly></td>
+        </tr>
+        <tr>
+          <td><label> Eligible for Earned Increment</label></td>
+          <td class="col-sm-2"><input type="text" class="form-control col-sm-1 money" style="text-align: right" value="0" readonly></td>
+          <td class="col-sm-2"><input type="text" class="form-control col-sm-1 money" style="text-align: right" value="0" readonly></td>
+          <td class="col-sm-2"><input type="text" class="form-control col-sm-1 money" style="text-align: right" value=""
+              readonly></td>
+        </tr>
+      </table>
+
+      <br/>
+      <a href="javascript:void(0);" class="btn-info btn-sm">Add Allowance</a>
+      <br/><br/>
+
+      <div class="row">
+        <div class="col-sm-10">
+          <label class="">Gross annual salary applicable to the calculation of pension</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" name="tblSalTotal" id="tblSalTotal" value="0" readonly>
+          <label class="col-sm-1"></label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br/>
+  <ul class="list-inline  col-sm-offset-6">
+    <li><button type="button" class="btn btn-default prev-step" routerLink="/application-state/bank-infomation">Previous</button></li>
+    <li><button type="button" class="btn btn-primary" id="btnPension" routerLink="/application-state/payment-infomation" (click)="btnClick()">Continue</button></li>
+  </ul>
+</div>

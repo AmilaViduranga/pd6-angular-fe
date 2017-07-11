@@ -4,7 +4,7 @@
     <br/>
 
     <div class="form-group">
-      <label class="control-label col-sm-4">Name in Full/සම්පුර්ණ නම /முழு பெயர்</label>
+      <label class="control-label col-sm-3">Name in Full</label>
       <div class="col-sm-8">
         <div class="col-sm-2 title-align">
           <select class="form-control" (change)="store.personalInformation.title = $event.srcElement.value">
@@ -17,14 +17,14 @@
         </div>
       
         <div class="col-sm-7">
-          <input type="text" class="form-control flat-edge" maxlength="200" (keyup)="store.personalInformation.fullName = $event.srcElement.value">
+          <input type="text" class="form-control flat-edge" maxlength="200">
           <span class="caption-blue">Enter name as in your NIC (Ex:- Tharika Ovini Disansa Dissanayaka)</span>
         </div>
       </div>
     </div>
 
     <div class="form-group">
-      <label class="control-label col-sm-4" for="salutation">Prefered Name /මුලකුරු සමග නම /முன்னர் பெயர்</label>
+      <label class="control-label col-sm-3" for="salutation">Prefered Name</label>
       <div class="col-sm-8">
         <div class="col-sm-7 title-align">
           <input type="text" class="form-control" placeholder="Prefered Name">
@@ -35,28 +35,28 @@
     
 
     <div class="form-group">
-      <label class="control-label col-sm-4">Date of Birth/උපන් දිනය/நியமனம</label>
+      <label class="control-label col-sm-3">Date of Birth</label>
       <div class="col-sm-2">
-        <input type="date" class="form-control" placeholder="YYYY-MM-DD" (change)="store.personalInformation.dob = $event.srcElement.value">
+        <input type="date" class="form-control" placeholder="YYYY-MM-DD">
       </div>
     </div>
     
 
     <div class="form-group">
-      <label class="control-label col-sm-4">NIC No/ජාතික හැදුනුම්පත් අංකය/தேசிய அடையாள அட்டை</label>
+      <label class="control-label col-sm-3">NIC No</label>
       <div class=" col-sm-3">
-        <input type="text" class="form-control" placeholder="XXXXXXXXXV" (keyup)="store.personalInformation.nic = $event.srcElement.value">
+        <input type="text" class="form-control" placeholder="XXXXXXXXXV">
       </div>
     </div>
 
     <div class="form-group">
-      <label class="col-xs-4 control-label">Gender/ස්ත්‍රී පුරුෂ භාවය /பாலினம்</label>
+      <label class="col-xs-3 control-label">Gender</label>
       <div class="col-xs-8">
-        <div class="btn-group" data-toggle="buttons" (change)="store.personalInformation.gender = $event.srcElement.value">
-          <label class="btn btn-default" (click)="store.personalInformation.gender = 'Male'">
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default">
             <input type="radio" value="male"> Male
           </label>
-          <label class="btn btn-default" (click)="store.personalInformation.gender = 'Female'">
+          <label class="btn btn-default">
             <input type="radio" value="female"/> Female
           </label>
         </div>
@@ -64,7 +64,7 @@
     </div>
 
     <div class="form-group">
-      <label for="photo" class="control-label col-sm-4">Photo</label>
+      <label for="photo" class="control-label col-sm-3">Photo</label>
       <div class=" col-sm-3 col-md-2 col-lg-2">
         <input type="file" class="upload" name="userfile" id="userfile" style="display: none;" accept=".jpg,.png,.jpeg,.gif" />
         <div class="thumbnail fill" style="width: 128px; height: 166px;">
@@ -83,9 +83,9 @@
     </div>
 
     <div class="form-group">
-      <label class="control-label col-sm-4">District / දිස්ත්‍රික්කය</label>
+      <label class="control-label col-sm-3">District</label>
       <div class="col-sm-3">
-        <select class="form-control" (change)="store.personalInformation.district = $event.srcElement.value">
+        <select class="form-control">
           <option value="0" disabled selected>Select</option>
           <option *ngFor="let district of appState.district">{{district}}</option>
          </select>
@@ -94,9 +94,9 @@
 
 
     <div class="form-group">
-      <label class="control-label col-sm-4">Divisional Secretariat Division / ප්‍රාදේශීය ලේකම් කොට්ඨාශය </label>
+      <label class="control-label col-sm-3">Divisional Secretariat Division</label>
       <div class="col-sm-3">
-        <select class="form-control" (change)="store.personalInformation.ds = $event.srcElement.value">
+        <select class="form-control">
           <option value="0" disabled selected>Select</option>
         </select>
       </div>
@@ -104,8 +104,8 @@
 
 
     <div class="form-group">
-      <label class="control-label col-sm-4">Grama Niladhari Division/ ග්‍රාම නිලධාරී</label>
-      <div class="col-sm-3" (change)="store.personalInformation.gramaNiladari = $event.srcElement.value">
+      <label class="control-label col-sm-3">Grama Niladhari Division</label>
+      <div class="col-sm-3">
         <select class="form-control gnDivision">
           <option value="0" disabled selected>Select</option>
         </select>
@@ -113,47 +113,33 @@
     </div>
 
     <div class="form-group">
-      <label for="address" class="control-label col-sm-4">Permanent Address / ස්ථිර ලිපිනය / நிரந்தர முகவரி</label>
+      <label for="address" class="control-label col-sm-3">Permanent Address</label>
       <div class=" col-sm-4">
-        <input type="text" class="form-control" placeholder="Address line 1" (keyup)="store.personalInformation.address1 = $event.srcElement.value">
+        <input type="text" class="form-control" placeholder="Address line 1">
       </div>
     </div>
 
     <div class="form-group">
-      <label for="address2" class="control-label col-sm-4"></label>
+      <label for="address2" class="control-label col-sm-3"></label>
       <div class=" col-sm-4">
-        <input type="text" class="form-control" placeholder="Address line 2" (keyup)="store.personalInformation.address2 = $event.srcElement.value">
+        <input type="text" class="form-control" placeholder="Address line 2">
       </div>
     </div>
 
     <div class="form-group">
-      <label for="address3" class="control-label col-sm-4"></label>
+      <label for="address3" class="control-label col-sm-3"></label>
       <div class=" col-sm-4">
-        <input type="text" class="form-control" placeholder="Address line 3" (keyup)="store.personalInformation.address3 = $event.srcElement.value">
+        <input type="text" class="form-control" placeholder="Address line 3">
       </div>
     </div>
 
     <div class="form-group">
-      <label for="residence" class="control-label col-sm-4">Telephone / දුරකථන</label>
+      <label for="residence" class="control-label col-sm-3">Telephone</label>
       <div class="col-sm-2">
-        <input type="text" class="form-control" maxlength="10" placeholder="Residence / ස්ථාවර" (keyup)="store.personalInformation.tpResidence = $event.srcElement.value">
+        <input type="text" class="form-control" maxlength="10" placeholder="Residence">
       </div>
       <div class="col-sm-2">
-        <input type="text" class="form-control" maxlength="10" placeholder="Mobile / ජංගම" placeholder="Skype id" (keyup)="store.personalInformation.tpMobile = $event.srcElement.value">
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label for="email" class="control-label col-sm-4">Email / විද්‍යුත් තැපෑල / மின்னஞ்சல்</label>
-      <div class="col-sm-3">
-        <input type="email" class="form-control" placeholder="your Email" placeholder="Skype id" (keyup)="store.personalInformation.email = $event.srcElement.value">
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label for="skype" class="control-label col-sm-4">Skype / ஸ்கைப்</label>
-      <div class="col-sm-3">
-        <input type="text" class="form-control" placeholder="Skype id" (keyup)="store.personalInformation.skype = $event.srcElement.value">
+        <input type="text" class="form-control" maxlength="10" placeholder="Mobile" placeholder="Mobile">
       </div>
     </div>
 
