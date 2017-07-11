@@ -91,6 +91,7 @@ li a:hover:not(.active) {
 }
 
 .navbarModified {
+  margin-top: -80px;
   height: 60px;
   background-color: #333333;
 }
