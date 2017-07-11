@@ -1,5 +1,34 @@
-.apply-borders {
+/*.apply-borders {
   border-style: solid;
   height: 265px;
   width: 265px;
+}*/
+.caption-blue{
+    color: blue;
+}
+
+.caption-red{
+    color: red;
+}
+
+.photo-size{
+    width: 128px; 
+    height: 166px;
+}
+
+.img-place{
+     max-height: 100%; 
+     max-width: 100%;
+}
+
+.img-upload{
+    display: none;
+}
+
+.title-align{
+    padding-left:0px;
+}
+
+.caption-green{
+    color: green;
 }

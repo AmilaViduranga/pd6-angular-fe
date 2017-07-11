@@ -15,6 +15,9 @@ span {
   font-size: 20px;
 }*/
 
+a {
+  cursor: pointer;
+}
 button {
   cursor: pointer;
 }

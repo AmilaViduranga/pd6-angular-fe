@@ -1,79 +1,224 @@
-<form class="card">
-  <div class="card-block">
-    <h3><i class="fa fa-money" aria-hidden="true"></i> Payment Information</h3>
-    <span>service period information</span><br>
-    <table class="table">
-      <thead class="thead-inverse">
+<div class="tab-pane" role="tabpanel" id="complete">
+  <h3>Payment Details</h3>
+  <br/>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 ">
+
+      <table id="tblPercentage" class="table table-striped">
+        <tr class="info">
+          <td><br/><label>Calculation of the Percentage</label></td>
+          <td class="col-sm-1"><b>Presesnt</b><br/>Reduced %</td>
+          <td class="col-sm-1"><b>Presesnt</b><br/>Unreduced %</td>
+          <td class="col-sm-1"></td>
+          <td class="col-sm-1"><b>After</b><br/>Reduced %</td>
+          <td class="col-sm-1"><b>After</b><br/>Unreduced %</td>
+        </tr>
         <tr>
-          <th></th>
-          <th>Present Reduced %</th>
-          <th>Present Unreduced %</th>
-          <th>After Reduced %</th>
-          <th>After Unreduced %</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let info of serviceInfo">
-          <td>{{info.title}}</td>
+          <td>Percentage entitled if the period of service is 25 years or more</td>
           <td>
-            <input type="number" class="form-control" placeholder="present Reduced">
+            <input type="text" class="form-control" name="tblPercentageReducedR1" id="tblPercentageReducedR1" value="0" readonly>
           </td>
           <td>
-            <input type="number" class="form-control" placeholder="present Unreduced">
+            <input type="text" class="form-control" name="tblPercentageUnreducedR1" id="tblPercentageUnreducedR1" value="0" readonly>
+          </td>
+          <td class="col-sm-1"></td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageReducedR1" id="tblPercentageReducedR1" value="0" readonly>
           </td>
           <td>
-            <input type="number" class="form-control" placeholder="After Reduced">
-          </td>
-          <td>
-            <input type="number" class="form-control" placeholder="After Unreduced">
+            <input type="text" class="form-control" name="tblPercentageUnreducedR1" id="tblPercentageUnreducedR1" value="0" readonly>
           </td>
         </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="card-block">
-    <label><b>Service Period Information</b></label><br>
-    <button class="btn btn-primary">
-      <i class="fa fa-plus"></i>
-      Add Deductions
-    </button><br>
-    <div class="form-group">
-      <label for="totalDeduction">Total Deduction</label>
-      <input type="number" class="form-control" id="totalDeduction"  placeholder="Total deduction">
-    </div>
-  </div>
-  <div class="card-block">
-    <label><b>Gratuity Entitlement</b></label><br>
-    <div class="form-group">
-      <label>Gross Gratuity</label>
-      <input type="number" class="form-control" placeholder="Gross Gratuity">
-    </div>
-    <div class="form-group">
-      <label>Amount Payable to the government</label>
-      <input type="number" class="form-control" placeholder="Amount Payable to the government">
-    </div>
-    <div class="form-group">
-      <label>Net Gratuity</label>
-      <input type="number" class="form-control" placeholder="Net Gratuity">
-    </div>
-  </div>
-  <div class="card-block">
-    <label><b>Monthly Pension Entitlement</b></label><br>
-    <table class="table">
-      <thead class="thead-inverse">
-      <tr>
-        <th></th>
-        <th>Reduced</th>
-        <th>UnReduced</th>
-      </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let info of pensionEntitlement">
-          <td>{{info.title}}</td>
-          <td>{{info.reduced}}</td>
-          <td>{{info.unreduced}}</td>
+        <tr>
+          <td>Percentage entitled for the for service of 25 years if the period of service is less than 25 years</td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageReducedR2" id="tblPercentageReducedR2" value="0" readonly>
+          </td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageUnreducedR2" id="tblPercentageUnreducedR2" value="0" readonly>
+          </td>
+           <td class="col-sm-1"></td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageReducedR1" id="tblPercentageReducedR1" value="0" readonly>
+          </td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageUnreducedR1" id="tblPercentageUnreducedR1" value="0" readonly>
+          </td>
         </tr>
-      </tbody>
-    </table>
+        <tr>
+          <td>If less than 25 years, the deductable percentage at 1% for every 6 months or for each period less than that (not
+            necessary in the event of more than 25 years)</td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageReducedR3" id="tblPercentageReducedR3" value="0" readonly>
+          </td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageUnreducedR3" id="tblPercentageUnreducedR3" value="0" readonly>
+          </td>
+           <td class="col-sm-1"></td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageReducedR1" id="tblPercentageReducedR1" value="0" readonly>
+          </td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageUnreducedR1" id="tblPercentageUnreducedR1" value="0" readonly>
+          </td>
+        </tr>
+        <tr>
+          <td>The deductable percentage at 0.2% for one month of no pay or for each period less than that (Circular 9/96)</td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageReducedR4" id="tblPercentageReducedR4" value="0" readonly>
+          </td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageUnreducedR4" id="tblPercentageUnreducedR4" value="0" readonly>
+          </td>
+           <td class="col-sm-1"></td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageReducedR1" id="tblPercentageReducedR1" value="0" readonly>
+          </td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageUnreducedR1" id="tblPercentageUnreducedR1" value="0" readonly>
+          </td>
+        </tr>
+        <tr>
+          <td>The net percentage to be taken as basis for the calculation of pension for the Officer after the above adjustments</td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageReducedR5" id="tblPercentageReducedR5" value="0">
+          </td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageUnreducedR5" id="tblPercentageUnreducedR5" value="0">
+          </td>
+           <td class="col-sm-1"></td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageReducedR1" id="tblPercentageReducedR1" value="0" readonly>
+          </td>
+          <td>
+            <input type="text" class="form-control" name="tblPercentageUnreducedR1" id="tblPercentageUnreducedR1" value="0" readonly>
+          </td>
+        </tr>
+      </table>
+
+    </div>
   </div>
-</form>
+
+  <br/>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 ">
+
+      <table id="tblDeductions" class="table table-striped">
+        <tr class="info">
+          <td><label>Deductions</label></td>
+          <td class="col-sm-2" align="right">Amount</td>
+        </tr>
+      </table>
+
+      <div class="row">
+        <div class="col-sm-10">
+          <label>Total Deductions</label>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" name="tblDeductionsTotal" id="tblDeductionsTotal" value="0" readonly>
+
+          <label class="col-sm-1"></label>
+        </div>
+
+      </div>
+
+      <a class="btn-info btn-sm" href="javascript:void(0);" id='anc_addDeduct' onclick="checkBankDetails();">Add Deduction</a>
+      <a class="btn-info btn-sm" href="javascript:void(0);" id='anc_remDeduct'>Remove Deduction</a>
+
+    </div>
+  </div>
+
+  <br/>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 ">
+      <table id="tblGratuity" class="table table-striped">
+        <tr class="info">
+          <td><label>Details of Gratuity Entitlement</label></td>
+          <td class="col-sm-2" align="right">Amount</td>
+        </tr>
+        <tr>
+          <td>
+            <label>Gross Gratuity</label>
+          </td>
+          <td>
+            <input type="text" class="form-control" name="grossGratuity" id="grossGratuity" value="" readonly>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Amount Payable to the government</label>
+          </td>
+          <td>
+            <input type="text" class="form-control" name="deductions" id="deductions" value="0" readonly>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Net Gratuity</label>
+          </td>
+          <td>
+            <input type="text" class="form-control" name="netGratuity" id="netGratuity" value="" readonly>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+  <br/>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 ">
+        
+        <table id="tblPercentage" class="table table-striped">
+        <tr class="info">
+          <td><br/><label>Monthly Pension Entitlement</label></td>
+          <td class="col-sm-2">Reduced %</td>
+          <td class="col-sm-2">Unreduced %</td>
+        </tr>
+        <tr>
+          <td>Present</td>
+          <td>
+            <input type="text" class="form-control" value="0" readonly>
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" readonly>
+          </td>
+        </tr>
+        <tr>
+          <td>After Revision</td>
+          <td>
+            <input type="text" class="form-control" value="0" readonly>
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" readonly>
+          </td>
+        </tr>
+        <tr>
+          <td>At 2020</td>
+          <td>
+            <input type="text" class="form-control" value="0" readonly>
+          </td>
+          <td>
+            <input type="text" class="form-control" value="0" readonly>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label for="submit" class="control-label col-sm-4"></label>
+    <div class="col-sm-3" id="btnSubmit">
+      <button class="btn btn-success" type="submit" name="submit" id="submit">Submit</button>
+    </div>
+
+  </div>
+
+</div>

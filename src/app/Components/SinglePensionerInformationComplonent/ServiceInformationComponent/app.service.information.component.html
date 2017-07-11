@@ -1,57 +1,40 @@
-<form class="card">
-  <div class="card-block">
-    <h3><i class="fa fa-building" aria-hidden="true"></i> Service Information</h3>
+<form class="form-horizontal" role="form">
+  <div class="container">
+    <h3>Service Information</h3>
+
     <div class="form-group">
-      <label >Ministry/Department/Institute</label>
-      <input type="text" class="form-control"  placeholder="Ministry/Department/Institute">
+      <label class="control-label col-sm-3">Ministry/Department/Institute</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="Ministry/Department/Institute">
+      </div>
     </div>
+
     <div class="form-group">
-      <label>Retired Officer Belongs To</label>
-      <input type="text" class="form-control"   placeholder="Retired Officer Belongs To">
+      <label class="control-label col-sm-3">Service</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" (keyup)="store.serviceInformation.service = $event.srcElement.value">
+        <!--<p>{{store.serviceInformation.service}}</p>-->
+      </div>
     </div>
-    <table class="table">
-      <thead class="thead-inverse">
-        <tr>
-          <th></th>
-          <th>Present</th>
-          <th>After Revision</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">
-            Service
-          </th>
-          <td>
-            Service
-          </td>
-          <td>
-            Service
-          </td>
-          <td>
-            <input type="checkbox">
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">
-            Grade
-          </th>
-          <td>
-            Grade
-          </td>
-          <td>
-            Grade
-          </td>
-          <td>
-            <input type="checkbox">
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
     <div class="form-group">
-      <label>Designation</label>
-      <select class="form-control">
+      <label class="control-label col-sm-3">grade</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" placeholder="Grade" (keyup)="store.serviceInformation.grade = $event.srcElement.value">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3">Retired officer belongs to</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" placeholder="Retired officer belongs to">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3">Designation</label>
+      <div class="col-sm-4">
+        <select class="form-control">
         <option selected disabled>Select Designation</option>
         <option>1</option>
         <option>2</option>
@@ -59,29 +42,34 @@
         <option>4</option>
         <option>5</option>
       </select>
-    </div>
-    <div class="form-group">
-      <label>Confirmed in New Post</label><br>
-      <input class="form-control" type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No" data-size="large">
-    </div>
-    <div class="form-group">
-      <label>Date of New Appointment</label>
-      <input type="date" class="form-control">
-    </div>
-    <div class="row">
-      <div class="col-sm-8"></div>
-      <div class="col-sm-4">
-        <div class="btn-group pull-right">
-          <button type="button" class="btn btn-primary">
-            <i class="fa fa-pencil"></i>
-            Edit
-          </button>
-          <button type="button" class="btn btn-success">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            Continue
-          </button>
-        </div>
       </div>
     </div>
+
+    <div class="form-group">
+      <label for="isConfirmed" class="control-label col-sm-3">Confirmed in Post</label>
+      <div class=" col-sm-2">
+        <input type="radio" name="isConfirmed" vlaue="Yes" checked (click)="store.serviceInformation.confirm = 'Yes'" />        Yes
+        <input type="radio" name="isConfirmed" value="No" (click)="store.serviceInformation.confirm = 'No'" /> No
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3">Retirement Reason</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" placeholder="Retirement Reason" (keyup)="store.serviceInformation.reason = $event.srcElement.value">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3">Date of New Appointment</label>
+      <div class=" col-sm-2">
+        <input type="date" class="form-control" placeholder="YYYY-MM-DD" />
+      </div>
+    </div>
+
+    <ul class="list-inline col-sm-offset-6">
+      <li><button type="button" class="btn btn-default prev-step" routerLink="/application-state/personal-infomation">Previous</button></li>
+      <li><button type="button" class="btn btn-primary" routerLink="/application-state/dependent-infomation">Continue</button></li>
+    </ul>
   </div>
 </form>
