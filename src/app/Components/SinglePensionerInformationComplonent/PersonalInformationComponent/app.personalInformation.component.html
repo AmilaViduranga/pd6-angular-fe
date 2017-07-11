@@ -1,84 +1,167 @@
-<form class="card">
-  <div class="card-block">
-    <div class="row">
-      <div class="col-sm-10">
-        <h3><i class="fa fa-user" aria-hidden="true"></i> Personal Information</h3>
-      </div>
-      <div class="col-sm-2 apply-borders">
-        <!-- display profile picturer of users -->
-      </div>
-    </div>
+<form class="form-horizontal" role="form">
+  <div class="container">
+    <h3>Personal Information</h3>
+    <br/>
+
     <div class="form-group">
-      <label for="nameInFul">Name in Full</label>
-      <input type="text" class="form-control" id="nameInFul"  placeholder="Enter full name">
-    </div>
-    <div class="form-group">
-      <label for="prefferedName">Preferred Name</label>
-      <input type="text" class="form-control" id="prefferedName" aria-describedby="emailHelp" placeholder="Enter preffered name">
-    </div>
-    <div class="form-group">
-      <label for="DateOfBirth">Date Of Birth</label>
-      <input type="date" class="form-control" id="DateOfBirth"  placeholder="date of birth">
-    </div>
-    <div class="form-group">
-      <label for="nic">NIC</label>
-      <input type="text" class="form-control" id="nic"  placeholder="NIC no">
-    </div>
-    <div class="form-group">
-      <label for="gender">Gender</label><br>
-      <label class="radio-inline"><input type="radio" name="gender">Male</label>&nbsp;
-      <label class="radio-inline"><input type="radio" name="gender">Female</label>
-    </div>
-    <div class="form-group">
-      <label for="dist">District</label>
-      <select class="form-control" id="dist">
-        <option>test1</option>
-        <option>test2</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="ds">DS Division</label>
-      <select class="form-control" id="ds">
-        <option>test1</option>
-        <option>test2</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="gndivision">GN Division</label>
-      <input type="text" class="form-control" id="gndivision"  placeholder="GN Division">
-    </div>
-    <div class="form-group">
-      <label>Permenent address</label>
-      <input type="text" class="form-control" id="address1"  placeholder="Address Line 1"><br>
-      <input type="text" class="form-control" id="address2"  placeholder="Address Line 2"><br>
-      <input type="text" class="form-control" id="address3"  placeholder="Address Line 3">
-    </div>
-    <div class="form-group">
-      <label for="gndivision">Telephone</label>
-      <div class="row">
-        <div class="col-sm-6">
-          <input type="text" class="form-control" id="residance"  placeholder="Residance">
+      <label class="control-label col-sm-4">Name in Full/සම්පුර්ණ නම /முழு பெயர்</label>
+      <div class="col-sm-8">
+        <div class="col-sm-2 title-align">
+          <select class="form-control" (change)="store.personalInformation.title = $event.srcElement.value">
+              <option value="0" disabled selected>Title</option>
+              <option value="Ven">Ven</option>
+              <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Miss">Miss</option>
+          </select>
         </div>
-        <div class="col-sm-6">
-          <input type="text" class="form-control" id="mobile"  placeholder="Mobile">
+      
+        <div class="col-sm-7">
+          <input type="text" class="form-control flat-edge" maxlength="200" (keyup)="store.personalInformation.fullName = $event.srcElement.value">
+          <span class="caption-blue">Enter name as in your NIC (Ex:- Tharika Ovini Disansa Dissanayaka)</span>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-8"></div>
-      <div class="col-sm-4">
-        <div class="btn-group pull-right">
-          <button type="button" class="btn btn-primary">
-            <i class="fa fa-pencil"></i>
-            Edit
-          </button>
-          <button type="button" class="btn btn-success">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            Continue
-          </button>
+
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="salutation">Prefered Name /මුලකුරු සමග නම /முன்னர் பெயர்</label>
+      <div class="col-sm-8">
+        <div class="col-sm-7 title-align">
+          <input type="text" class="form-control" placeholder="Prefered Name">
+          <span id="preferNameInfo" class="caption-blue">Enter a preferd name (Ex:- T.O.D.Dissanayaka)<p class="caption-green">(This will be appeared to the pension ID)</p></span>
         </div>
       </div>
     </div>
+    
+
+    <div class="form-group">
+      <label class="control-label col-sm-4">Date of Birth/උපන් දිනය/நியமனம</label>
+      <div class="col-sm-2">
+        <input type="date" class="form-control" placeholder="YYYY-MM-DD" (change)="store.personalInformation.dob = $event.srcElement.value">
+      </div>
+    </div>
+    
+
+    <div class="form-group">
+      <label class="control-label col-sm-4">NIC No/ජාතික හැදුනුම්පත් අංකය/தேசிய அடையாள அட்டை</label>
+      <div class=" col-sm-3">
+        <input type="text" class="form-control" placeholder="XXXXXXXXXV" (keyup)="store.personalInformation.nic = $event.srcElement.value">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label">Gender/ස්ත්‍රී පුරුෂ භාවය /பாலினம்</label>
+      <div class="col-xs-8">
+        <div class="btn-group" data-toggle="buttons" (change)="store.personalInformation.gender = $event.srcElement.value">
+          <label class="btn btn-default" (click)="store.personalInformation.gender = 'Male'">
+            <input type="radio" value="male"> Male
+          </label>
+          <label class="btn btn-default" (click)="store.personalInformation.gender = 'Female'">
+            <input type="radio" value="female"/> Female
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="photo" class="control-label col-sm-4">Photo</label>
+      <div class=" col-sm-3 col-md-2 col-lg-2">
+        <input type="file" class="upload" name="userfile" id="userfile" style="display: none;" accept=".jpg,.png,.jpeg,.gif" />
+        <div class="thumbnail fill" style="width: 128px; height: 166px;">
+          <label for="userfile">
+            <img class="imgup img-responsive" style="max-height: 100%; max-width: 100%;" name="gal" id="gal" src="<?php echo base_url(); ?>/assets/img/buttonAdd.png" alt="your image"/>
+          </label>
+          <span onclick="dltImage('gal', '<?php echo base_url(); ?>')"></span>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <span id="userfileInfo" class="caption-blue">Upload image which should appear in Pensioner ID</span><br/>
+        <span id="userfileInfo" class="caption-blue">Passport size (128 x 166)</span><br/>
+        <span id="userfileErr" class="caption-red">Please select a valid image file</span>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-4">District / දිස්ත්‍රික්කය</label>
+      <div class="col-sm-3">
+        <select class="form-control" (change)="store.personalInformation.district = $event.srcElement.value">
+          <option value="0" disabled selected>Select</option>
+          <option *ngFor="let district of appState.district">{{district}}</option>
+         </select>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="control-label col-sm-4">Divisional Secretariat Division / ප්‍රාදේශීය ලේකම් කොට්ඨාශය </label>
+      <div class="col-sm-3">
+        <select class="form-control" (change)="store.personalInformation.ds = $event.srcElement.value">
+          <option value="0" disabled selected>Select</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="control-label col-sm-4">Grama Niladhari Division/ ග්‍රාම නිලධාරී</label>
+      <div class="col-sm-3" (change)="store.personalInformation.gramaNiladari = $event.srcElement.value">
+        <select class="form-control gnDivision">
+          <option value="0" disabled selected>Select</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="address" class="control-label col-sm-4">Permanent Address / ස්ථිර ලිපිනය / நிரந்தர முகவரி</label>
+      <div class=" col-sm-4">
+        <input type="text" class="form-control" placeholder="Address line 1" (keyup)="store.personalInformation.address1 = $event.srcElement.value">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="address2" class="control-label col-sm-4"></label>
+      <div class=" col-sm-4">
+        <input type="text" class="form-control" placeholder="Address line 2" (keyup)="store.personalInformation.address2 = $event.srcElement.value">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="address3" class="control-label col-sm-4"></label>
+      <div class=" col-sm-4">
+        <input type="text" class="form-control" placeholder="Address line 3" (keyup)="store.personalInformation.address3 = $event.srcElement.value">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="residence" class="control-label col-sm-4">Telephone / දුරකථන</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" maxlength="10" placeholder="Residence / ස්ථාවර" (keyup)="store.personalInformation.tpResidence = $event.srcElement.value">
+      </div>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" maxlength="10" placeholder="Mobile / ජංගම" placeholder="Skype id" (keyup)="store.personalInformation.tpMobile = $event.srcElement.value">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="control-label col-sm-4">Email / විද්‍යුත් තැපෑල / மின்னஞ்சல்</label>
+      <div class="col-sm-3">
+        <input type="email" class="form-control" placeholder="your Email" placeholder="Skype id" (keyup)="store.personalInformation.email = $event.srcElement.value">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="skype" class="control-label col-sm-4">Skype / ஸ்கைப்</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" placeholder="Skype id" (keyup)="store.personalInformation.skype = $event.srcElement.value">
+      </div>
+    </div>
+
+    <br/>
+
+    <ul class="list-inline col-sm-offset-6">
+      <li><button type="button" class="btn btn-primary" id="btnPersonal" routerLink="/application-state/service-infomation">Continue</button></li>
+    </ul>
+
   </div>
 </form>
-
