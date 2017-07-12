@@ -10,4 +10,13 @@ export class PensionersInformationService {
   constructor(private baseService: BaseService) {
 
   }
+
+  getPendingInformation() {
+    const params = {
+      state: 'pending'
+    }
+    this.baseService.get('pensioners', 'liveApi', params, (result, error) => {
+      console.log(result);
+    });
+  }
 }
