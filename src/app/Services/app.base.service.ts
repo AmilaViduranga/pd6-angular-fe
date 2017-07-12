@@ -14,6 +14,7 @@ export class BaseService {
   private liveApi: String;
   private revisionApi: String;
   private requestedServerType: String;
+  private paramList: String;
 
   constructor(private serverAddresses: ServerAddresses) {
     this.axios = Axios;
@@ -33,8 +34,13 @@ export class BaseService {
     this.validatePath(serverAddressType, dataReturened => {
       if (dataReturened && this.requestedServerType != null) {
         path = this.requestedServerType + path;
-        this.axios.get(path, data)
+        this.axios.get(path, {
+            params: {
+              state: 'pending'
+            }
+          })
           .then(response => {
+            console.log(response);
             return callback(response.data, null);
           })
           .catch(err => {
@@ -51,6 +57,7 @@ export class BaseService {
     this.validatePath(serverAddressType, dataReturned => {
       if (dataReturned && this.requestedServerType != null) {
         path = this.requestedServerType + path;
+        console.log(data);
         this.axios.post(path, data)
           .then(response => {
             return callback(response, null);
