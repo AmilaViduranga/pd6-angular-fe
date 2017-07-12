@@ -12,15 +12,14 @@
     <div class="form-group">
       <label class="control-label col-sm-3">Service</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" (keyup)="store.serviceInformation.service = $event.srcElement.value">
-        <!--<p>{{store.serviceInformation.service}}</p>-->
+        <input type="text" class="form-control">
       </div>
     </div>
 
     <div class="form-group">
       <label class="control-label col-sm-3">grade</label>
       <div class="col-sm-2">
-        <input type="text" class="form-control" placeholder="Grade" (keyup)="store.serviceInformation.grade = $event.srcElement.value">
+        <input type="text" class="form-control" placeholder="Grade">
       </div>
     </div>
 
@@ -48,15 +47,15 @@
     <div class="form-group">
       <label for="isConfirmed" class="control-label col-sm-3">Confirmed in Post</label>
       <div class=" col-sm-2">
-        <input type="radio" name="isConfirmed" vlaue="Yes" checked (click)="store.serviceInformation.confirm = 'Yes'" />        Yes
-        <input type="radio" name="isConfirmed" value="No" (click)="store.serviceInformation.confirm = 'No'" /> No
+        <input type="radio" name="isConfirmed" vlaue="Yes" checked/>Yes
+        <input type="radio" name="isConfirmed" value="No" /> No
       </div>
     </div>
 
     <div class="form-group">
       <label class="control-label col-sm-3">Retirement Reason</label>
       <div class="col-sm-3">
-        <input type="text" class="form-control" placeholder="Retirement Reason" (keyup)="store.serviceInformation.reason = $event.srcElement.value">
+        <input type="text" class="form-control" placeholder="Retirement Reason">
       </div>
     </div>
 
@@ -67,9 +66,16 @@
       </div>
     </div>
 
-    <ul class="list-inline col-sm-offset-6">
-      <li><button type="button" class="btn btn-default prev-step" routerLink="/application-state/personal-infomation">Previous</button></li>
-      <li><button type="button" class="btn btn-primary" routerLink="/application-state/dependent-infomation">Continue</button></li>
-    </ul>
+    <br/>
+
+    <div class="form-group">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-4 align">
+        <button type="button" class="btn btn-warning">Edit</button>
+        <button type="button" class="btn btn-info">Previous</button>
+        <button type="button" class="btn btn-primary">Continue</button>
+      </div>
+    </div>
+
   </div>
 </form>
