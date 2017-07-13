@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 import { Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { ServerAddresses } from '../Models/app.model.data.serverAddresses';
+import store from '../Models/app.modeldata.store.main';
 
 @Injectable()
 export class BaseService {
@@ -37,10 +38,12 @@ export class BaseService {
         this.axios.get(path, {
             params: {
               state: 'pending'
+            },
+            headers: {
+              'session-key': store.EmployeeAuth.getToken
             }
           })
           .then(response => {
-            console.log(response);
             return callback(response.data, null);
           })
           .catch(err => {
@@ -57,7 +60,6 @@ export class BaseService {
     this.validatePath(serverAddressType, dataReturned => {
       if (dataReturned && this.requestedServerType != null) {
         path = this.requestedServerType + path;
-        console.log(data);
         this.axios.post(path, data)
           .then(response => {
             return callback(response, null);

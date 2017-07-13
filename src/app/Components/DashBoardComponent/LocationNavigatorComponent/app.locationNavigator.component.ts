@@ -13,5 +13,5 @@ export class LocationNavigatorComponent {
   @Input() description;
   @Input() url;
   @Input() urlinfo;
-  @Input() imageUrl;
+  @Input() icon;
 }
