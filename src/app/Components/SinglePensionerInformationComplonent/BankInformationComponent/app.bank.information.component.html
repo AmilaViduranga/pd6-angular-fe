@@ -5,34 +5,32 @@
 
     <div class="form-group">
       <label class="control-label col-sm-3" for="bank">Bank Name</label>
-      <div class="col-sm-2">
-        <select class="form-control" (change)="onChange($event.target.value)" >
-          <option value="0" disabled selected>Select Bank</option>
-          <option *ngFor="let bank of appState.banks" value="{{bank.id}}">{{bank.name}}</option>                                            
+      <div class="col-sm-3">
+        <select class="form-control" >
+          <option value="0" disabled selected>Select Bank</option>                                          
         </select>
       </div>
     </div>
    
     <div class="form-group">
       <label class="control-label col-sm-3" for="branch">Branch</label>
-      <div class="col-sm-2">
-        <select class="form-control" (change)="store.bankInformation.branch = $event.srcElement.value">
+      <div class="col-sm-3">
+        <select class="form-control">
           <option value="0" disabled selected>Select Branch</option>
-          <option *ngFor="let branch of appState.branches" value="{{branch.id}}">{{branch.name}}</option>
         </select>
       </div>
     </div>
 
     <div class="form-group">
       <label for="bAccNo" class="control-label col-sm-3">Bank Account no</label>
-      <div class="col-sm-3">
-        <input type="text" class="form-control" placeholder="Bank Account No." (keyup)="store.bankInformation.account = $event.srcElement.value">
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="Bank Account No.">
       </div>
     </div>
     
     <div class="form-group">
       <label for="bAccNoConf" class="control-label col-sm-3">Confirm Bank Account no</label>
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <input type="text" class="form-control" placeholder="Confirm Bank Account no">
       </div>
     </div>
@@ -41,55 +39,44 @@
 
     <div class="form-group">
       <label class="control-label col-sm-3" for="bankGrat">Bank Name</label>
-      <div class="col-sm-2">
+      <div class="col-sm-3">
         <select class="form-control" >
           <option value="0" disabled selected>Select Bank</option>
-          <option *ngFor="let banks of appState.gratuityBank" value="{{banks.value}}">{{banks.bank}}</option>
         </select>
       </div>
     </div>
     
     <div class="form-group">
       <label class="control-label col-sm-3" for="branchGrat">Branch</label>
-      <div class="col-sm-2">
-        <select class="form-control" (change)="onChange($event.target.value)" (change)="store.bankInformation.gratuityBranch = $event.srcElement.value">
+      <div class="col-sm-3">
+        <select class="form-control">
           <option value="0" disabled selected>Select Branch</option>
-           <option *ngFor="let branch of appState.branches" value="{{branch.id}}">{{branch.name}}</option>
         </select>
       </div>
     </div>
     
     <div class="form-group">
       <label for="bAccNoGrat" class="control-label col-sm-3">Bank Account No</label>
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <input type="text" class="form-control" placeholder="Bank Account no" (keyup)="store.bankInformation.gratuityAccount = $event.srcElement.value">
       </div>
     </div>
     
     <div class="form-group">
       <label for="bAccNoGratConf" class="control-label col-sm-3">Confirm Bank Account No</label>
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <input type="text" class="form-control" placeholder="Confirm Bank Account no">
       </div>
     </div>
    
-    <!--Non-Army-->
-    <div>
-      <ul class="list-inline col-sm-offset-6">
-        <li><button type="button" class="btn btn-default prev-step" routerLink="/application-state/dependent-infomation" (click)="getBranches()">Previous</button></li>
-        <li><button type="button" class="btn btn-primary" routerLink="/application-state/pensionable-infomation"(click)="btnClick()">Continue</button></li>
-        
-      </ul>
+    <div class="form-group">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-4 align">
+        <button type="button" class="btn btn-warning">Edit</button>
+        <button type="button" class="btn btn-info">Previous</button>
+        <button type="button" class="btn btn-primary">Continue</button>
+      </div>
     </div>
-    <!--/.Non-Army-->
-    <!--Army-->
-    <div hidden>
-      <ul class="list-inline col-sm-offset-6">
-        <li ><button type="button" class="btn btn-primary" routerLink="/application-state/pensionable-infomation">Continue</button></li>
-        <li ><button type="submit" class="btn btn-primary">Submit Primary Application</button></li>
-      </ul>
-    </div>
-    <!--/.Army-->
 
   </div>
 </form>

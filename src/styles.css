@@ -1,23 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
 .form-back {
   background-color: snow;
 }
-/*
-label {
-  font-size: 20px;
-}
-
-td {
-  font-size: 20px;
-}
-
-span {
-  font-size: 20px;
-}*/
-
 a {
   cursor: pointer;
 }
 button {
   cursor: pointer;
+}
+button{
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    border-radius: 0px !important;
+    border: 0px !important;
+}
+input{
+    border-radius: 0px !important;
+}
+
+select{
+    border-radius: 0px !important;
+}
+
+.align{
+     text-align:right;
 }
