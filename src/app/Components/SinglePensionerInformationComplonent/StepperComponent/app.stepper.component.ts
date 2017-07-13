@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.stepper.component.css']
 })
 export class StepperComponent {
-  loadContent(contentId) {
+  loadContent(contentId, indexId) {
     let contents: any;
     contents = document.getElementsByClassName('infoContents');
     for (let i = 0; i < contents.length; i++) {
