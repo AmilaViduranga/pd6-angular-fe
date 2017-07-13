@@ -11,12 +11,9 @@ export class PensionersInformationService {
 
   }
 
-  getPendingInformation() {
-    const params = {
-      state: 'pending'
-    }
-    this.baseService.get('pensioners', 'liveApi', params, (result, error) => {
-      console.log(result);
+  getPendingInformation(callback) {
+    this.baseService.get('pensioners', 'liveApi', null, (result, error) => {
+      return callback(result, error);
     });
   }
 }

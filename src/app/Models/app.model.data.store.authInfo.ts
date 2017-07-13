@@ -5,7 +5,6 @@ import { action, computed, observable } from 'mobx';
 import {isNullOrUndefined, isUndefined} from "util";
 
 export default class EmployeeAuthModel {
-  @observable public testInfo: String;
   @observable private UserName: String;
   @observable private Token: String;
   @observable private UserRole: String;

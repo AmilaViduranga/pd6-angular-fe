@@ -1,26 +1,24 @@
-<div class="row">
-  <form class="form-horizontal" role="form">
-    <div class="container">
-      <h3>Personal Information</h3>
-      <br/>
+<form class="form-horizontal" role="form">
+  <div class="container">
+    <h3>Personal Information</h3>
+    <br/>
 
-      <div class="form-group">
-        <label class="control-label col-sm-3">Name in Full</label>
-        <div class="col-sm-8">
-          <div class="col-sm-2 title-align">
-            <select class="form-control">
-                <option value="0" disabled selected>Title</option>
-                <option value="Ven">Ven</option>
-                <option value="Mr">Mr</option>
-                <option value="Mrs">Mrs</option>
-                <option value="Miss">Miss</option>
-              </select>
-          </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Name in Full</label>
+      <div class="col-sm-8">
+        <div class="col-sm-2 title-align">
+          <select class="form-control" (change)="store.personalInformation.title = $event.srcElement.value">
+              <option value="0" disabled selected>Title</option>
+              <option value="Ven">Ven</option>
+              <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Miss">Miss</option>
+          </select>
+        </div>
 
-          <div class="col-sm-7">
-            <input type="text" class="form-control flat-edge" maxlength="200">
-            <span class="caption-blue">Enter name as in your NIC (Ex:- Tharika Ovini Disansa Dissanayaka)</span>
-          </div>
+        <div class="col-sm-7">
+          <input type="text" class="form-control flat-edge" maxlength="200">
+          <span class="caption-blue">Enter name as in your NIC (Ex:- Tharika Ovini Disansa Dissanayaka)</span>
         </div>
       </div>
 
@@ -33,7 +31,7 @@
           </div>
         </div>
       </div>
-
+    </div>
 
       <div class="form-group">
         <label class="control-label col-sm-3">Date of Birth</label>
@@ -41,8 +39,6 @@
           <input type="date" class="form-control" placeholder="YYYY-MM-DD">
         </div>
       </div>
-
-
       <div class="form-group">
         <label class="control-label col-sm-3">NIC No</label>
         <div class=" col-sm-3">
@@ -87,6 +83,7 @@
         <div class="col-sm-3">
           <select class="form-control">
           <option value="0" disabled selected>Select</option>
+          <option></option>
          </select>
         </div>
       </div>
@@ -149,7 +146,6 @@
           <button type="button" class="btn btn-primary">Continue</button>
         </div>
       </div>
+  </div>
+</form>
 
-    </div>
-  </form>
-</div>

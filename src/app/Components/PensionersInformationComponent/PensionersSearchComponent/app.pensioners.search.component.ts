@@ -1,7 +1,7 @@
 /**
  * Created by Amila on 6/22/2017.
  */
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pensioners-search',
