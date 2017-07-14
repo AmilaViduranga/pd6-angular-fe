@@ -1,5 +1,7 @@
 /**
  * Created by Amila on 7/4/2017.
+ * this is the base service that handle all the rest resrvices get, put,post and delete
+ * axios has used as rest client
  */
 import Axios from 'axios';
 import { Injectable } from '@angular/core';

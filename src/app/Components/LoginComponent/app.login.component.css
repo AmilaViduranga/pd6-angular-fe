@@ -39,3 +39,7 @@
 a {
   color: white !important;
 }
+
+.hide-button {
+  visibility: hidden;
+}

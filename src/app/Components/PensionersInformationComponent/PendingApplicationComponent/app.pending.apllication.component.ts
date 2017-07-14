@@ -23,8 +23,15 @@ export class PendingApplicationPensionersComponent {
   pendingApplications: any;
 
   constructor(service: PensionersInformationService) {
-    this.pensionersList = new Array<PensionserBaseInfoModel>();
     this.service = service;
+    this.loadPendingApplications();
+  }
+
+  /*
+   * load pending informations and save them in store object
+   */
+  loadPendingApplications() {
+    this.pensionersList = new Array<PensionserBaseInfoModel>();
     this.store = store;
     if (store.pendingApplications == null || store.pendingApplications.length === 0) {
       this.service.getPendingInformation((result, error) => {
@@ -51,7 +58,7 @@ export class PendingApplicationPensionersComponent {
           this.store.pendingApplications = this.pensionersList;
         }
         if (error != null) {
-         console.log(error);
+          console.log(error);
         }
         this.pendingApplications = this.store.pendingApplications;
       });

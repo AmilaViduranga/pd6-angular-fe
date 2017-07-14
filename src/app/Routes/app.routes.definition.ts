@@ -45,5 +45,9 @@ export const AppRoutes: Routes = [
   {
     path: 'singleInformation',
     component: PensionersSearchComponent
+  },
+  {
+    path: 'revision/modify',
+    component: PersonalInformationComponent
   }
 ]

@@ -12,6 +12,8 @@ import { AppComponent } from './Components/RootComponent/app.component';
 import { DataTableModule } from 'angular2-datatable';
 import { PensionersInformationsModule } from './Components/PensionersInformationComponent/app.pensioners.informations.module';
 import { MobxAngularModule } from 'mobx-angular';
+import { SimpleNotificationsModule } from 'angular2-notifications';
+import { CustomFormsModule } from 'ng2-validation';
 /*
  * component registering
  */
@@ -34,8 +36,7 @@ import { ServerAddresses } from './Models/app.model.data.serverAddresses';
  */
 import { BaseService } from './Services/app.base.service';
 import { LoginService } from './Services/app.login.service';
-
-import { CustomFormsModule } from 'ng2-validation';
+import { ToastMessagesService } from './Services/app.toast.messages.service';
 
 @NgModule({
   declarations: [
@@ -55,12 +56,14 @@ import { CustomFormsModule } from 'ng2-validation';
     DataTableModule,
     PensionersInformationsModule,
     RouterModule.forRoot(AppRoutes),
-    MobxAngularModule
+    MobxAngularModule,
+    SimpleNotificationsModule.forRoot()
   ],
   providers: [
     ServerAddresses,
     BaseService,
-    LoginService
+    LoginService,
+    ToastMessagesService
   ],
   bootstrap: [AppComponent],
   exports: [
