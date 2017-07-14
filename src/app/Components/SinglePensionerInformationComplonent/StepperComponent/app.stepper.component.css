@@ -5,4 +5,5 @@
 .tabIndexes:hover {
    color: #f1f1f1;
    background-color: #3498db;
+   border-radius: 0px;
 }
