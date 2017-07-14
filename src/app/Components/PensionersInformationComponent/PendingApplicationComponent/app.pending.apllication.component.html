@@ -4,7 +4,7 @@
     <h2>Pending Applications</h2><br>
     <div class="row">
       <div class="input-group" id="adv-search">
-        <input type="text" class="form-control" placeholder="Search by NIC/ Pension number" />
+        <input type="text" class="form-control" placeholder="Search by NIC/ Pension number" [(ngModel)]="filterQuery"/>
         <div class="input-group-btn">
           <div class="btn-group" role="group">
             <button type="button" class="btn btn-primary">
@@ -15,7 +15,7 @@
       </div>
     </div><br>
     <div class="row">
-      <table class="table table-striped" [mfData]="pendingApplications" #mf="mfDataTable" [mfRowsOnPage]="10">
+      <table class="table table-striped" [mfData]="pendingApplications | pendingResultFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="10">
         <thead>
         <tr>
           <th style="width: 25%">

@@ -12,8 +12,12 @@ export class PensionersInformationService {
   }
 
   getPendingInformation(callback) {
-    this.baseService.get('pensioners', 'liveApi', null, (result, error) => {
+    this.baseService.get('pensioners', 'liveApi', { state: 'pending'}, (result, error) => {
       return callback(result, error);
     });
   }
+
+  // getAllPensionerList(callback) {
+  //   this.baseService.get('pensioners', 'live')
+  // }
 }

@@ -28,13 +28,18 @@ import { ServerAddresses } from '../../Models/app.model.data.serverAddresses';
 import { BaseService } from '../../Services/app.base.service';
 import { PensionersInformationService } from '../../Services/PensionersInformationServices/app.pensioners.information.service';
 
+/*
+ * import filters
+ */
+import { PendingResultFilter } from '../PensionersInformationComponent/PendingApplicationComponent/app.pending.application.filter';
 @NgModule({
   declarations: [
     PensionersSearchComponent,
     PendingApplicationPensionersComponent,
     RejectedApplicationPensionersComponent,
     SubmittedApplicationPensionersComponent,
-    AwardApplicationPensionersComponent
+    AwardApplicationPensionersComponent,
+    PendingResultFilter
   ],
   imports: [
     BrowserModule,

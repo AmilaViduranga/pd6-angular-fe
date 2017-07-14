@@ -10,6 +10,7 @@ import { SubmittedApplicationPensionersComponent } from '../Components/Pensioner
 import { AwardApplicationPensionersComponent } from '../Components/PensionersInformationComponent/PendingAwardApplicationComponent/app.pending.award.component';
 import { PersonalInformationComponent } from '../Components/SinglePensionerInformationComplonent/PersonalInformationComponent/app.personalInformation.component';
 import { StepperComponent } from '../Components/SinglePensionerInformationComplonent/StepperComponent/app.stepper.component';
+import { PensionersSearchComponent } from '../Components/PensionersInformationComponent/PensionersSearchComponent/app.pensioners.search.component';
 
 export const AppRoutes: Routes = [
   {
@@ -43,6 +44,6 @@ export const AppRoutes: Routes = [
   },
   {
     path: 'singleInformation',
-    component: StepperComponent
+    component: PensionersSearchComponent
   }
 ]
