@@ -31,14 +31,12 @@ export class BaseService {
   /*
    * handle base get url
    */
-  get(path, serverAddressType, data, callback) {
+  get(path, serverAddressType, params, callback) {
     this.validatePath(serverAddressType, dataReturened => {
       if (dataReturened && this.requestedServerType != null) {
         path = this.requestedServerType + path;
         this.axios.get(path, {
-            params: {
-              state: 'pending'
-            },
+            params: params,
             headers: {
               'session-key': store.EmployeeAuth.getToken
             }
