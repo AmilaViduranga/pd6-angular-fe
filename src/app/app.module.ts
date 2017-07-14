@@ -35,6 +35,8 @@ import { ServerAddresses } from './Models/app.model.data.serverAddresses';
 import { BaseService } from './Services/app.base.service';
 import { LoginService } from './Services/app.login.service';
 
+import { CustomFormsModule } from 'ng2-validation';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +47,7 @@ import { LoginService } from './Services/app.login.service';
   ],
   imports: [
     BrowserModule,
+    CustomFormsModule,
     FormsModule,
     HttpModule,
     NgbModule,
