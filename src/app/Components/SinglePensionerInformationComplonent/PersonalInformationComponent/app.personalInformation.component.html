@@ -1,26 +1,26 @@
-<div class="row">
-  <form class="form-horizontal" role="form">
-    <div class="container">
-      <h3>Personal Information</h3>
-      <br/>
+<form class="form-horizontal" role="form">
+  <div class="container">
+    <h3>Personal Information</h3>
+    <br/>
 
-      <div class="form-group">
-        <label class="control-label col-sm-3">Name in Full</label>
-        <div class="col-sm-8">
-          <div class="col-sm-2 title-align">
-            <select class="form-control">
+    <div class="form-group">
+      <label class="control-label col-sm-3">Name in Full</label>
+      <div class="col-sm-8">
+        <div class="col-sm-2 title-align">
+          <select class="form-control">
                 <option value="0" disabled selected>Title</option>
                 <option value="Ven">Ven</option>
                 <option value="Mr">Mr</option>
                 <option value="Mrs">Mrs</option>
                 <option value="Miss">Miss</option>
               </select>
-          </div>
+        </div>
 
-          <div class="col-sm-7">
-            <input type="text" class="form-control flat-edge" maxlength="200" required>
-            <span class="caption-blue">Enter name as in your NIC (Ex:- Tharika Ovini Disansa Dissanayaka)</span>
-          </div>
+        <div class="col-sm-7">
+          <input type="text" class="form-control flat-edge" maxlength="200" required>
+          <span class="caption-blue">Enter name as in your NIC (Ex:- Tharika Ovini Disansa Dissanayaka)</span>
+        </div>
+      </div>
 
 
       <div class="form-group">
@@ -34,119 +34,118 @@
       </div>
     </div>
 
-      <div class="form-group">
-        <label class="control-label col-sm-3">Date of Birth</label>
-        <div class="col-sm-2">
-          <input type="date" class="form-control" placeholder="YYYY-MM-DD">
-        </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Date of Birth</label>
+      <div class="col-sm-2">
+        <input type="date" class="form-control" placeholder="YYYY-MM-DD">
       </div>
-      <div class="form-group">
-        <label class="control-label col-sm-3">NIC No</label>
-        <div class=" col-sm-3">
-          <input type="text" class="form-control" placeholder="XXXXXXXXXV">
-        </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">NIC No</label>
+      <div class=" col-sm-3">
+        <input type="text" class="form-control" placeholder="XXXXXXXXXV">
       </div>
+    </div>
 
-      <div class="form-group">
-        <label class="col-xs-3 control-label">Gender</label>
-        <div class="col-xs-8">
-          <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-default">
+    <div class="form-group">
+      <label class="col-xs-3 control-label">Gender</label>
+      <div class="col-xs-8">
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default">
             <input type="radio" value="male"> Male
           </label>
-            <label class="btn btn-default">
+          <label class="btn btn-default">
             <input type="radio" value="female"/> Female
           </label>
-          </div>
         </div>
       </div>
+    </div>
 
-      <div class="form-group">
-        <label for="photo" class="control-label col-sm-3">Photo</label>
-        <div class=" col-sm-3 col-md-2 col-lg-2">
-          <input type="file" class="upload" name="userfile" id="userfile" style="display: none;" accept=".jpg,.png,.jpeg,.gif" />
-          <div class="thumbnail fill" style="width: 128px; height: 166px;">
-            <label for="userfile">
+    <div class="form-group">
+      <label for="photo" class="control-label col-sm-3">Photo</label>
+      <div class=" col-sm-3 col-md-2 col-lg-2">
+        <input type="file" class="upload" name="userfile" id="userfile" style="display: none;" accept=".jpg,.png,.jpeg,.gif" />
+        <div class="thumbnail fill" style="width: 128px; height: 166px;">
+          <label for="userfile">
             <img class="imgup img-responsive" style="max-height: 100%; max-width: 100%;" name="gal" id="gal" src="<?php echo base_url(); ?>/assets/img/buttonAdd.png" alt="your image"/>
           </label>
-            <span onclick="dltImage('gal', '<?php echo base_url(); ?>')"></span>
-          </div>
-        </div>
-        <div class="col-sm-5">
-          <span id="userfileInfo" class="caption-blue">Upload image which should appear in Pensioner ID</span><br/>
-          <span id="userfileInfo" class="caption-blue">Passport size (128 x 166)</span><br/>
-          <span id="userfileErr" class="caption-red">Please select a valid image file</span>
+          <span onclick="dltImage('gal', '<?php echo base_url(); ?>')"></span>
         </div>
       </div>
+      <div class="col-sm-5">
+        <span id="userfileInfo" class="caption-blue">Upload image which should appear in Pensioner ID</span><br/>
+        <span id="userfileInfo" class="caption-blue">Passport size (128 x 166)</span><br/>
+        <span id="userfileErr" class="caption-red">Please select a valid image file</span>
+      </div>
+    </div>
 
-      <div class="form-group">
-        <label class="control-label col-sm-3">District</label>
-        <div class="col-sm-3">
-          <select class="form-control">
+    <div class="form-group">
+      <label class="control-label col-sm-3">District</label>
+      <div class="col-sm-3">
+        <select class="form-control">
           <option value="0" disabled selected>Select</option>
           <option></option>
          </select>
-        </div>
       </div>
+    </div>
 
-      <div class="form-group">
-        <label class="control-label col-sm-3">Divisional Secretariat Division</label>
-        <div class="col-sm-3">
-          <select class="form-control">
+    <div class="form-group">
+      <label class="control-label col-sm-3">Divisional Secretariat Division</label>
+      <div class="col-sm-3">
+        <select class="form-control">
           <option value="0" disabled selected>Select</option>
         </select>
-        </div>
       </div>
+    </div>
 
-      <div class="form-group">
-        <label class="control-label col-sm-3">Grama Niladhari Division</label>
-        <div class="col-sm-3">
-          <select class="form-control gnDivision">
+    <div class="form-group">
+      <label class="control-label col-sm-3">Grama Niladhari Division</label>
+      <div class="col-sm-3">
+        <select class="form-control gnDivision">
           <option value="0" disabled selected>Select</option>
         </select>
-        </div>
       </div>
+    </div>
 
-      <div class="form-group">
-        <label for="address" class="control-label col-sm-3">Permanent Address</label>
-        <div class=" col-sm-4">
-          <input type="text" class="form-control" placeholder="Address line 1">
-        </div>
+    <div class="form-group">
+      <label for="address" class="control-label col-sm-3">Permanent Address</label>
+      <div class=" col-sm-4">
+        <input type="text" class="form-control" placeholder="Address line 1">
       </div>
+    </div>
 
-      <div class="form-group">
-        <label for="address2" class="control-label col-sm-3"></label>
-        <div class=" col-sm-4">
-          <input type="text" class="form-control" placeholder="Address line 2">
-        </div>
+    <div class="form-group">
+      <label for="address2" class="control-label col-sm-3"></label>
+      <div class=" col-sm-4">
+        <input type="text" class="form-control" placeholder="Address line 2">
       </div>
+    </div>
 
-      <div class="form-group">
-        <label for="address3" class="control-label col-sm-3"></label>
-        <div class=" col-sm-4">
-          <input type="text" class="form-control" placeholder="Address line 3">
-        </div>
+    <div class="form-group">
+      <label for="address3" class="control-label col-sm-3"></label>
+      <div class=" col-sm-4">
+        <input type="text" class="form-control" placeholder="Address line 3">
       </div>
+    </div>
 
-      <div class="form-group">
-        <label for="residence" class="control-label col-sm-3">Telephone</label>
-        <div class="col-sm-2">
-          <input type="text" class="form-control" maxlength="10" placeholder="Residence">
-        </div>
-        <div class="col-sm-2">
-          <input type="text" class="form-control" maxlength="10" placeholder="Mobile" placeholder="Mobile">
-        </div>
+    <div class="form-group">
+      <label for="residence" class="control-label col-sm-3">Telephone</label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" maxlength="10" placeholder="Residence">
       </div>
-
-      <br/>
-
-      <div class="form-group">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-4 align">
-          <button type="button" class="btn btn-warning">Edit</button>
-          <button type="button" class="btn btn-primary">Continue</button>
-        </div>
+      <div class="col-sm-2">
+        <input type="text" class="form-control" maxlength="10" placeholder="Mobile" placeholder="Mobile">
       </div>
+    </div>
+
+    <br/>
+
+    <div class="form-group">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-4 align">
+        <button type="button" class="btn btn-warning">Edit</button>
+        <button type="button" class="btn btn-primary">Continue</button>
+      </div>
+    </div>
   </div>
 </form>
-
