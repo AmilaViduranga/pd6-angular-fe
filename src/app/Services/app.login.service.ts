@@ -10,7 +10,9 @@ export class LoginService {
   constructor(private baseService: BaseService) {
 
   }
-
+ /*
+  * login to the revision service
+  */
   public loginToRevisionSystem(loginInstance, callback) {
     if (loginInstance != null) {
       this.baseService.post('users/authenticate', 'revisionApi', loginInstance, (result, err) => {

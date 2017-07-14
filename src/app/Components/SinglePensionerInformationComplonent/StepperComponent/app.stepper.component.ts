@@ -9,6 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.stepper.component.css']
 })
 export class StepperComponent {
+  /*
+   * load the tab content after user select them
+   */
   loadContent(contentId, indexId) {
     let contents: any;
     contents = document.getElementsByClassName('infoContents');
