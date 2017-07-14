@@ -95,3 +95,8 @@ li a:hover:not(.active) {
   height: 60px;
   background-color: #333333;
 }
+
+.logout {
+  background-color: red;
+  color: white !important;
+}

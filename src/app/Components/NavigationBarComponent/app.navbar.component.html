@@ -1,17 +1,9 @@
-<!-- navigation top bar -->
-<div class="navbarModified">
-  <ul>
-    <li style="float:right"><a href="#about">Logout</a></li>
-  </ul>
-</div>
-
 <!-- side bar -->
 <div id="mySidenav" class="sidenav sidenavnew">
   <!--<a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>-->
   <a routerLink="/dashboard" class="mainItem">
-    <div class="row" style="text-align: left;">
-        <h3>PD6</h3>
-    </div>
+      <img src="../../../assets/Images/logo.png">
+      <span style="color: cyan;"><h4>Revision App (PD 06)</h4></span>
   </a>
   <a routerLink="/singleInformation">
     <i class="fa fa-plus" aria-hidden="true"></i>
@@ -20,5 +12,9 @@
   <a href="#">
     <i class="fa fa-print" aria-hidden="true"></i>
     Award Letter Print
+  </a>
+  <a href="#" class="logout">
+    <i class="fa fa-sign-out" aria-hidden="true"></i>
+    Log Out
   </a>
 </div>

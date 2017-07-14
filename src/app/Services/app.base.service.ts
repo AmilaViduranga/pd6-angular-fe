@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 import { Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { ServerAddresses } from '../Models/app.model.data.serverAddresses';
+import store from '../Models/app.modeldata.store.main';
 
 @Injectable()
 export class BaseService {
@@ -14,6 +15,7 @@ export class BaseService {
   private liveApi: String;
   private revisionApi: String;
   private requestedServerType: String;
+  private paramList: String;
 
   constructor(private serverAddresses: ServerAddresses) {
     this.axios = Axios;
@@ -33,7 +35,14 @@ export class BaseService {
     this.validatePath(serverAddressType, dataReturened => {
       if (dataReturened && this.requestedServerType != null) {
         path = this.requestedServerType + path;
-        this.axios.get(path, data)
+        this.axios.get(path, {
+            params: {
+              state: 'pending'
+            },
+            headers: {
+              'session-key': store.EmployeeAuth.getToken
+            }
+          })
           .then(response => {
             return callback(response.data, null);
           })
