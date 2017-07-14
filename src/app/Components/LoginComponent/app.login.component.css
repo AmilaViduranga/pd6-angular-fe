@@ -1,15 +1,5 @@
-.background {
-  background-color: #111111;
+.adjust{
+  padding-top: 70%;
+  font-size: 14px;
 }
 
-.image-prop {
-  width: inherit;
-}
-
-.adjust-top {
-  padding-top: 20px;
-}
-
-.fixMargin {
-  margin-left: -200px;
-}
