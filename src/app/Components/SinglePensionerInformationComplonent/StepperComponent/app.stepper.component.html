@@ -1,6 +1,6 @@
 <ul class="nav nav-tabs  nav-justified" role="tablist">
     <li role="presentation">
-        <a class="tabIndexes"  data-toggle="tab" aria-controls="step1" role="tab" title="Personal Information" (click)="loadContent('personal')">
+        <a class="tabIndexes"  data-toggle="tab" aria-controls="step1" role="tab" title="Personal Information"  id="ipersonal" (click)="loadContent('personal', 'ipersonal')">
             <span class="round-tab">
                 <i class="fa fa-user large icon-sze"></i>
             </span>
@@ -8,7 +8,7 @@
     </li>
 
     <li role="presentation">
-        <a class="tabIndexes" data-toggle="tab" aria-controls="step4" role="tab" title="Service Information" (click)="loadContent('serviceInfo')">
+        <a class="tabIndexes" data-toggle="tab" aria-controls="step4" role="tab" title="Service Information" id="iserviceInfo" (click)="loadContent('serviceInfo', 'iserviceInfo')">
             <span class="round-tab">
                 <i class="fa fa-id-card-o large icon-sze"></i>
             </span>
@@ -16,7 +16,7 @@
     </li>
 
     <li role="presentation">
-        <a class="tabIndexes" data-toggle="tab" aria-controls="step3" role="tab" title="Bank Information" (click)="loadContent('bankInfo')">
+        <a class="tabIndexes" data-toggle="tab" aria-controls="step3" role="tab" title="Bank Information" id="ibankinfo" (click)="loadContent('bankInfo', 'ibankinfo')">
             <span class="round-tab">
                 <i class=" fa fa-bank large icon-sze"></i>
             </span>
@@ -24,7 +24,7 @@
     </li>
 
     <li role="presentation">
-        <a class="tabIndexes" data-toggle="tab" aria-controls="step4" role="tab" title="revision Information" (click)="loadContent('revisionInfo')">
+        <a class="tabIndexes" data-toggle="tab" aria-controls="step4" role="tab" title="revision Information" id="irevisionInfo" (click)="loadContent('revisionInfo', 'irevisionInfo')">
             <span class="round-tab">
                 <i class="fa fa-pencil large icon-sze"></i>
             </span>
@@ -32,7 +32,7 @@
     </li>
 
     <li role="presentation">
-        <a class="tabIndexes"data-toggle="tab" aria-controls="complete" role="tab" title="Payment Information"  (click)="loadContent('paymentInfo')">
+        <a class="tabIndexes"data-toggle="tab" aria-controls="complete" role="tab" title="Payment Information" id="ipaymentInfo" (click)="loadContent('paymentInfo', 'ipaymentInfo')">
             <span class="round-tab">
                 <i class="fa fa-usd large icon-sze"></i>
             </span>

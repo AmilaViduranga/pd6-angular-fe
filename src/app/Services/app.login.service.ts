@@ -11,9 +11,20 @@ export class LoginService {
 
   }
 
-  public loginToSystem(loginInstance, callback) {
+  public loginToRevisionSystem(loginInstance, callback) {
     if (loginInstance != null) {
       this.baseService.post('users/authenticate', 'revisionApi', loginInstance, (result, err) => {
+        return callback(result, err);
+      });
+    }
+  }
+
+  /*
+   * login to the live to system, have to modify this service
+   */
+  public loginToLiveSystem(loginInstance, callback) {
+    if (loginInstance != null) {
+      this.baseService.post('employees/authenticate/login', 'liveApi', loginInstance, (result, err) => {
         return callback(result, err);
       });
     }

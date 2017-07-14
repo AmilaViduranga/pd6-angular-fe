@@ -11,6 +11,7 @@ import { SinglePensionInformationModule } from './Components/SinglePensionerInfo
 import { AppComponent } from './Components/RootComponent/app.component';
 import { DataTableModule } from 'angular2-datatable';
 import { PensionersInformationsModule } from './Components/PensionersInformationComponent/app.pensioners.informations.module';
+import { MobxAngularModule } from 'mobx-angular';
 /*
  * component registering
  */
@@ -53,7 +54,8 @@ import { CustomFormsModule } from 'ng2-validation';
     SinglePensionInformationModule,
     DataTableModule,
     PensionersInformationsModule,
-    RouterModule.forRoot(AppRoutes)
+    RouterModule.forRoot(AppRoutes),
+    MobxAngularModule
   ],
   providers: [
     ServerAddresses,

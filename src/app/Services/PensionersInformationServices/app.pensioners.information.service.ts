@@ -10,4 +10,10 @@ export class PensionersInformationService {
   constructor(private baseService: BaseService) {
 
   }
+
+  getPendingInformation(callback) {
+    this.baseService.get('pensioners', 'liveApi', null, (result, error) => {
+      return callback(result, error);
+    });
+  }
 }

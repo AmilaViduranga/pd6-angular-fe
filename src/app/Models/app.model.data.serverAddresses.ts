@@ -13,8 +13,8 @@ export class ServerAddresses {
   revisionApi: String;
 
   constructor() {
-    //this.liveApi = 'http://sathkara.pensions.gov.lk:8080/pms_dev/api/';
-    this.liveApi = "http://192.168.102.133:8080/pensions_api/api/";
+    this.liveApi = 'http://sathkara.pensions.gov.lk:8080/pms_dev/api/';
+    //this.liveApi = 'http://192.168.102.133:8080/pensions_api/api/';
     this.revisionApi = 'http://sathkara.pensions.gov.lk:8080/revision_be/api/';
   }
 }
