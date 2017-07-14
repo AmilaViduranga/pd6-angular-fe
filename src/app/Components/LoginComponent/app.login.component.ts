@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { LoginService } from '../../Services/app.login.service';
 import {Router} from '@angular/router';
 import store from '../../Models/app.modeldata.store.main';
+import { ToastMessagesService } from '../../Services/app.toast.messages.service';
 
 @Component({
   selector: 'app-login',
@@ -14,12 +15,14 @@ import store from '../../Models/app.modeldata.store.main';
 export class LoginComponent {
   username: String;
   password: String;
-
-  constructor(private serviceApi: LoginService, private router: Router) {
+  constructor(private serviceApi: LoginService, private router: Router, private notificationService: ToastMessagesService) {
     this.password = null;
     this.username = null;
   }
 
+  /*
+   * login to the system by provideing user name and password
+   */
   loginToSystem() {
     const loginInstance = {
       'username': this.username,
@@ -37,11 +40,11 @@ export class LoginComponent {
               localStorage.setItem('userName', resultLive.data.username);
               this.router.navigateByUrl('/dashboard');
             } else if (errLive.response.status === 401) {
-              alert('invalid attempt to live api login, please try again');
+              this.notificationService.errorMessage('Invalid Login', 'Provide correct password, username to login');
             }
           });
         } else if (errRev.response.status === 401) {
-          alert('invalid attempt to revision api login, please try again');
+          this.notificationService.errorMessage('Invalid Login', 'Provide correct password, username to login');
         }
       });
     }
