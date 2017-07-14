@@ -1,5 +1,41 @@
 .adjust{
-  padding-top: 70%;
+  padding-top: 70px;
   font-size: 14px;
 }
 
+.sidenav {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0072C6;
+  color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  width: 325px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenavnew {
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0px;
+}
+
+.mainItem {
+  margin-top: 0px;
+  font-weight: bold;
+}
+
+a {
+  color: white !important;
+}
