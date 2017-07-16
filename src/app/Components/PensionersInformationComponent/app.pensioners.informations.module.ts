@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DataTableModule } from 'angular2-datatable';
-
 /*
  * components declaration on pensioners informations
  */

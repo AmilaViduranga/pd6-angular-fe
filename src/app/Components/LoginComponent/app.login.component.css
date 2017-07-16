@@ -1,5 +1,5 @@
 .adjust{
-  padding-top: 70px;
+  padding-top: 150px;
   font-size: 14px;
 }
 
@@ -42,4 +42,22 @@ a {
 
 .hide-button {
   visibility: hidden;
+}
+
+.headline {
+  color: #2183CC;
+  font-weight: 400;
+}
+
+label {
+  font-weight: 100;
+}
+
+.logo {
+  margin-top: 150px;
+  margin-left: 45px;
+}
+
+.font-logo {
+  font-size: medium;
 }
