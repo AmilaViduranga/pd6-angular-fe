@@ -34,3 +34,17 @@
 a {
   color: white !important;
 }
+
+.sidebar-components a:hover {
+  color: #f1f1f1 !important;
+  background-color: steelblue !important;
+}
+
+.logo {
+  margin-top: 150px;
+  margin-left: 45px;
+}
+
+.sidebar-components {
+  padding-top: 30%;
+}

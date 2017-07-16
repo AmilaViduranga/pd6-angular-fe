@@ -3,7 +3,6 @@
   font-size: 20px;
   /*padding: 20px;*/
   font-family: fantasy;
-  margin-left: 10px;
 }
 .dashboard-tiles{
   padding: 20px;
@@ -12,7 +11,7 @@
   transition: 0.3s;
   cursor: pointer;
   padding: 0px;
-  border: 20px  solid #ecf0f5;
+  /*border: 20px  solid #ecf0f5;*/
   /*height: 125px;*/
   height: 180px;
   color: white;

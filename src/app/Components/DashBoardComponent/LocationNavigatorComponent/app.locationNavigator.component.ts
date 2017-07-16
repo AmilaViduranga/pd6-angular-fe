@@ -10,8 +10,9 @@ import { Component, Input } from '@angular/core';
 })
 export class LocationNavigatorComponent {
   @Input() title;
-  @Input() description;
-  @Input() url;
-  @Input() urlinfo;
+  @Input() routerUrl;
   @Input() icon;
+  @Input() count;
+  @Input() tile;
+  @Input() tilecolor;
 }

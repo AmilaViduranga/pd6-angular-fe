@@ -1,14 +1,10 @@
 body{
-  background-color: #ECF0F5;
+  background-color: #F8F8F8;
+  font-family: 'Segoe UI WPC','Segoe UI',Tahoma,'Microsoft Sans Serif',Verdana,sans-serif;
 }
 
 a {
   cursor: pointer;
-}
-
-a:not(:first-child):hover {
-  color: #f1f1f1 !important;
-  background-color: steelblue !important;
 }
 
 button {

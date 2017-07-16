@@ -18,4 +18,5 @@ export default class PensionserBaseInfoModel {
   @observable prefName: string;
   @observable wOPNumber: string;
   @observable servicePeriod: PensionerServiceInfoModel;
+  @observable pensionNumber: string;
 }
