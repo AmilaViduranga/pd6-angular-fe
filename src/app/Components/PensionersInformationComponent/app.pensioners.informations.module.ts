@@ -1,6 +1,7 @@
 /**
  * Created by Amila on 6/22/2017.
  */
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -30,7 +31,10 @@ import { PensionersInformationService } from '../../Services/PensionersInformati
 /*
  * import filters
  */
-import { PendingResultFilter } from '../PensionersInformationComponent/PendingApplicationComponent/app.pending.application.filter';
+import { PendingResultFilter } from './Filters/app.pending.application.filter';
+
+import { AppRoutes } from '../../Routes/app.routes.definition';
+
 @NgModule({
   declarations: [
     PensionersSearchComponent,
@@ -45,7 +49,8 @@ import { PendingResultFilter } from '../PensionersInformationComponent/PendingAp
     FormsModule,
     HttpModule,
     NgbModule,
-    DataTableModule
+    DataTableModule,
+    RouterModule.forRoot(AppRoutes)
   ],
   providers: [
     ServerAddresses,

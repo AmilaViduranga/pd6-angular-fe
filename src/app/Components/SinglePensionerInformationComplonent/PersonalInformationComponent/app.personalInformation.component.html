@@ -67,7 +67,7 @@
         <input type="file" class="upload" name="userfile" id="userfile" style="display: none;" accept=".jpg,.png,.jpeg,.gif" />
         <div class="thumbnail fill" style="width: 128px; height: 166px;">
           <label for="userfile">
-            <img class="imgup img-responsive" style="max-height: 100%; max-width: 100%;" name="gal" id="gal" src="<?php echo base_url(); ?>/assets/img/buttonAdd.png" alt="your image"/>
+            <img class="imgup img-responsive" style="max-height: 100%; max-width: 100%;" name="gal" id="gal"  alt="your image"/>
           </label>
           <span onclick="dltImage('gal', '<?php echo base_url(); ?>')"></span>
         </div>
@@ -144,7 +144,7 @@
       <div class="col-sm-3"></div>
       <div class="col-sm-4 align">
         <button type="button" class="btn btn-warning">Edit</button>
-        <button type="button" class="btn btn-primary">Continue</button>
+        <button type="button" class="btn btn-primary" (click)="continue()">Continue</button>
       </div>
     </div>
   </div>
