@@ -16,7 +16,7 @@ import { PendingApplicationPensionersComponent } from './PendingApplicationCompo
 import { RejectedApplicationPensionersComponent } from './RegectedApplicationComponent/app.rejected.application.component';
 import { SubmittedApplicationPensionersComponent } from './SubmittedApplicationComponent/app.submited.application.component';
 import { AwardApplicationPensionersComponent } from './PendingAwardApplicationComponent/app.pending.award.component';
-
+import { PensionersSearchAllMockComponent } from './PensionersSearchAllMockComponent/app.pensioners.search.component';
 /*
  * import data model
  */
@@ -33,6 +33,9 @@ import { PensionersInformationService } from '../../Services/PensionersInformati
  */
 import { PendingResultFilter } from './Filters/app.pending.application.filter';
 
+/*
+ * routes registering
+ */
 import { AppRoutes } from '../../Routes/app.routes.definition';
 
 @NgModule({
@@ -42,7 +45,8 @@ import { AppRoutes } from '../../Routes/app.routes.definition';
     RejectedApplicationPensionersComponent,
     SubmittedApplicationPensionersComponent,
     AwardApplicationPensionersComponent,
-    PendingResultFilter
+    PendingResultFilter,
+    PensionersSearchAllMockComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,11 @@ import { AwardApplicationPensionersComponent } from '../Components/PensionersInf
 import { PersonalInformationComponent } from '../Components/SinglePensionerInformationComplonent/PersonalInformationComponent/app.personalInformation.component';
 import { StepperComponent } from '../Components/SinglePensionerInformationComplonent/StepperComponent/app.stepper.component';
 import { PensionersSearchComponent } from '../Components/PensionersInformationComponent/PensionersSearchComponent/app.pensioners.search.component';
-
+import { ServiceInformationComponent } from '../Components/SinglePensionerInformationComplonent/ServiceInformationComponent/app.service.information.component';
+import { BankInformationComponent } from '../Components/SinglePensionerInformationComplonent/BankInformationComponent/app.bank.information.component';
+import { SalaryRevisionInformationComponent } from '../Components/SinglePensionerInformationComplonent/SalaryRevisionInformationComponent/app.salary.revision.information.component';
+import { PaymentInformationComponent  } from '../Components/SinglePensionerInformationComplonent/PaymentInformationComponent/app.payment.information.component';
+import { PensionersSearchAllMockComponent } from '../Components/PensionersInformationComponent/PensionersSearchAllMockComponent/app.pensioners.search.component';
 export const AppRoutes: Routes = [
   {
     path: 'dashboard',
@@ -44,10 +48,37 @@ export const AppRoutes: Routes = [
   },
   {
     path: 'singleInformation',
-    component: PensionersSearchComponent
+    component: PensionersSearchAllMockComponent
   },
   {
-    path: 'revision/modify',
-    component: StepperComponent
+    path: 'revision/modify/:pensionnumber',
+    component: StepperComponent,
+    children: [
+      {
+        path: 'persion',
+        component: PersonalInformationComponent
+      },
+      {
+        path: 'bank',
+        component: BankInformationComponent
+      },
+      {
+        path: 'service',
+        component: ServiceInformationComponent
+      },
+      {
+        path: 'salary',
+        component: SalaryRevisionInformationComponent
+      },
+      {
+        path: 'payment',
+        component: PaymentInformationComponent
+      },
+      {
+        path: '',
+        redirectTo: 'persion',
+        pathMatch: 'full'
+      }
+    ]
   }
 ]

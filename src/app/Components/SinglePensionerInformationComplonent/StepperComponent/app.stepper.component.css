@@ -4,6 +4,12 @@
 
 .tabIndexes:hover {
    color: #f1f1f1;
-   background-color: #3498db;
+   background-color: #0072C6;
    border-radius: 0px;
+}
+
+.active{
+  color: #f1f1f1;
+  background-color: #0072C6 !important;
+  border-radius: 0px !important;
 }

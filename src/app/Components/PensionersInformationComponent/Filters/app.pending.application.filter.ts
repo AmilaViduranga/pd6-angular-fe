@@ -13,7 +13,7 @@ export class PendingResultFilter implements PipeTransform {
     if (query) {
       return array.filter(function(row) {
         let word = query.toLowerCase();
-        let nic = row.nic.toLowerCase();
+        let nic = row.NIC.toLowerCase();
         let id = row.id;
 
         if (nic.indexOf(word) > -1 || id == word) {

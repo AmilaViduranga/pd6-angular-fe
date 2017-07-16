@@ -1,14 +1,15 @@
 <div id="mySidenav" class="sidenav sidenavnew">
-  <a routerLink="/dashboard" class="mainItem">
+  <a class="mainItem">
     <img src="../../../assets/Images/logo.png" class="logo">
     <!--<span style="color: cyan;"><h4>Revision App (PD 06)</h4></span>-->
   </a>
   <div class="sidebar-components" >
+    <a routerLink="/dashboard">HOME</a>
     <a routerLink="/singleInformation">
       <!--<i class="fa fa-plus" aria-hidden="true"></i>-->
       NEW APPLICATION
     </a>
-    <a href="#">
+    <a (click)="notDeveloped()">
       <!--<i class="fa fa-print" aria-hidden="true"></i>-->
       PRINT AWARD LETTER
     </a>

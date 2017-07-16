@@ -13,7 +13,7 @@
   </div>
 </div><br>
 <div class="row">
-  <table class="table table-striped" [mfData]="pensionerList | pendingResultFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="10">
+  <table class="table table-striped" [mfData]="pensionerList | pendingResultFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="5">
     <thead>
     <tr>
       <th style="width: 25%">
@@ -32,10 +32,10 @@
     </thead>
     <tbody>
     <tr *ngFor="let singleData of mf.data">
-      <td *ngIf="singleData.state == state">{{singleData.NIC}}</td>
-      <td *ngIf="singleData.state == state">{{singleData.pensionNumber}}</td>
-      <td *ngIf="singleData.state == state">{{singleData.name}}</td>
-      <td *ngIf="singleData.state == state">
+      <td>{{singleData.NIC}}</td>
+      <td>{{singleData.pensionNumber}}</td>
+      <td>{{singleData.name}}</td>
+      <td>
         <button class="btn btn-primary" [routerLink]="['/revision/modify/',singleData.pensionNumber]">procdeed</button>
       </td>
     </tr>

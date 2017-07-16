@@ -6,11 +6,11 @@ import { PensionersInformationService } from '../../../Services/PensionersInform
 import MockPensioners from '../../../Models/MockObjectStore/app.mock.pensioners';
 
 @Component({
-  selector: 'app-pensioners-search',
+  selector: 'app-pensioners-all-search',
   templateUrl: './app.pensioners.search.component.html',
   styleUrls: ['./app.pensioners.search.component.css']
 })
-export class PensionersSearchComponent {
+export class PensionersSearchAllMockComponent {
   @Input() state: any;
   pensionerList: any;
   constructor(private service: PensionersInformationService) {

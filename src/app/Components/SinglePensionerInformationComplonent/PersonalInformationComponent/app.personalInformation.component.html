@@ -1,33 +1,29 @@
-<form class="form-horizontal" role="form">
+<form class="form-horizontal" role="form" *ngIf="pensioner">
   <div class="container">
     <h3>Personal Information</h3>
     <br/>
-
     <div class="form-group">
       <label class="control-label col-sm-3">Name in Full</label>
       <div class="col-sm-8">
         <div class="col-sm-2 title-align">
-          <select class="form-control">
-                <option value="0" disabled selected>Title</option>
-                <option value="Ven">Ven</option>
-                <option value="Mr">Mr</option>
-                <option value="Mrs">Mrs</option>
-                <option value="Miss">Miss</option>
-              </select>
+          <select class="form-control" [(ngModel)]="pensioner.title" name="title">
+            <option value="0" disabled selected>Title</option>
+            <option value="Ven">Ven</option>
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Miss">Miss</option>
+          </select>
         </div>
-
         <div class="col-sm-7">
-          <input type="text" class="form-control flat-edge" maxlength="200" required>
+          <input type="text" class="form-control flat-edge" maxlength="200" [(ngModel)]="pensioner.nameInNic" name="nic"required>
           <span class="caption-blue">Enter name as in your NIC (Ex:- Tharika Ovini Disansa Dissanayaka)</span>
         </div>
       </div>
-
-
       <div class="form-group">
         <label class="control-label col-sm-3" for="salutation">Prefered Name</label>
         <div class="col-sm-8">
           <div class="col-sm-7 title-align">
-            <input type="text" class="form-control" placeholder="Prefered Name">
+            <input type="text" class="form-control" placeholder="Prefered Name" [(ngModel)]="pensioner.name" name="namePrefered">
             <span id="preferNameInfo" class="caption-blue">Enter a preferd name (Ex:- T.O.D.Dissanayaka)<p class="caption-green">(This will be appeared to the pension ID)</p></span>
           </div>
         </div>
@@ -37,13 +33,13 @@
     <div class="form-group">
       <label class="control-label col-sm-3">Date of Birth</label>
       <div class="col-sm-2">
-        <input type="date" class="form-control" placeholder="YYYY-MM-DD">
+        <input type="date" class="form-control" placeholder="YYYY-MM-DD" [(ngModel)]="pensioner.dob" name="dob">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-3">NIC No</label>
       <div class=" col-sm-3">
-        <input type="text" class="form-control" placeholder="XXXXXXXXXV">
+        <input type="text" class="form-control" placeholder="XXXXXXXXXV" name="pensioner.nic" [(ngModel)]="pensioner.NIC">
       </div>
     </div>
 
@@ -67,7 +63,7 @@
         <input type="file" class="upload" name="userfile" id="userfile" style="display: none;" accept=".jpg,.png,.jpeg,.gif" />
         <div class="thumbnail fill" style="width: 128px; height: 166px;">
           <label for="userfile">
-            <img class="imgup img-responsive" style="max-height: 100%; max-width: 100%;" name="gal" id="gal"  alt="your image"/>
+            <img class="imgup img-responsive" style="max-height: 100%; max-width: 100%; padding-top: 15px; cursor: pointer;" name="gal" id="gal"  alt="your image" src="../../../../assets/Images/profile.png"/>
           </label>
           <span onclick="dltImage('gal', '<?php echo base_url(); ?>')"></span>
         </div>
@@ -82,9 +78,13 @@
     <div class="form-group">
       <label class="control-label col-sm-3">District</label>
       <div class="col-sm-3">
-        <select class="form-control">
+        <select class="form-control" [(ngModel)]="pensioner.district" name="district">
           <option value="0" disabled selected>Select</option>
-          <option></option>
+          <option value="1">Colombo</option>
+          <option value="2">Gampaha</option>
+          <option value="3">Mathara</option>
+          <option value="4">Kaluthara</option>
+          <option value="5">Galle</option>
          </select>
       </div>
     </div>
@@ -92,8 +92,12 @@
     <div class="form-group">
       <label class="control-label col-sm-3">Divisional Secretariat Division</label>
       <div class="col-sm-3">
-        <select class="form-control">
+        <select class="form-control" [(ngModel)]="pensioner.dsd" name="dsd">
           <option value="0" disabled selected>Select</option>
+          <option value="1">Maradana</option>
+          <option value="2">Pannipitiya</option>
+          <option value="3">Nugegoda</option>
+          <option value="4">Maharagama</option>
         </select>
       </div>
     </div>
@@ -101,8 +105,13 @@
     <div class="form-group">
       <label class="control-label col-sm-3">Grama Niladhari Division</label>
       <div class="col-sm-3">
-        <select class="form-control gnDivision">
+        <select class="form-control gnDivision" [(ngModel)]="pensioner.gnd" name="gnd">
           <option value="0" disabled selected>Select</option>
+          <option value="1">GM1</option>
+          <option value="2">GM2</option>
+          <option value="3">GM3</option>
+          <option value="4">GM4</option>
+          <option value="5">GM5</option>
         </select>
       </div>
     </div>
@@ -110,31 +119,31 @@
     <div class="form-group">
       <label for="address" class="control-label col-sm-3">Permanent Address</label>
       <div class=" col-sm-4">
-        <input type="text" class="form-control" placeholder="Address line 1">
+        <input type="text" class="form-control" placeholder="Address line 1" [(ngModel)]="pensioner.addressOne" name="addressOne">
       </div>
     </div>
 
     <div class="form-group">
       <label for="address2" class="control-label col-sm-3"></label>
       <div class=" col-sm-4">
-        <input type="text" class="form-control" placeholder="Address line 2">
+        <input type="text" class="form-control" placeholder="Address line 2" [(ngModel)]="pensioner.addressTwo" name="addressTwo">
       </div>
     </div>
 
     <div class="form-group">
       <label for="address3" class="control-label col-sm-3"></label>
       <div class=" col-sm-4">
-        <input type="text" class="form-control" placeholder="Address line 3">
+        <input type="text" class="form-control" placeholder="Address line 3" [(ngModel)]="pensioner.addressThree" name="addressThree">
       </div>
     </div>
 
     <div class="form-group">
       <label for="residence" class="control-label col-sm-3">Telephone</label>
       <div class="col-sm-2">
-        <input type="text" class="form-control" maxlength="10" placeholder="Residence">
+        <input type="text" class="form-control" maxlength="10" placeholder="Residence" [(ngModel)]="pensioner.residence" name="residence">
       </div>
       <div class="col-sm-2">
-        <input type="text" class="form-control" maxlength="10" placeholder="Mobile" placeholder="Mobile">
+        <input type="text" class="form-control" maxlength="10" placeholder="Mobile" placeholder="Mobile" [(ngModel)]="pensioner.mobile" name="mobile">
       </div>
     </div>
 
@@ -143,8 +152,8 @@
     <div class="form-group">
       <div class="col-sm-3"></div>
       <div class="col-sm-4 align">
-        <button type="button" class="btn btn-warning">Edit</button>
-        <button type="button" class="btn btn-primary" (click)="continue()">Continue</button>
+        <button type="button" class="btn btn-warning" (click)="editData()">Edit</button>
+        <button type="button" class="btn btn-primary">Continue</button>
       </div>
     </div>
   </div>

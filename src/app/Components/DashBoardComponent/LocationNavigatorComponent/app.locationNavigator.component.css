@@ -76,6 +76,10 @@
   background: #25b329;
 }
 
+.inner {
+  padding-left: 20px;
+}
+
 .inner.h3{
   font-weight: 900;
 }
