@@ -48,6 +48,6 @@ export const AppRoutes: Routes = [
   },
   {
     path: 'revision/modify',
-    component: PersonalInformationComponent
+    component: StepperComponent
   }
 ]

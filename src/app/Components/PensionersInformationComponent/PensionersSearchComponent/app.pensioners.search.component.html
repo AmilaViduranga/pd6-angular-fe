@@ -1,7 +1,7 @@
-<div class="row ajust-top">
+<div class="row">
   <div class="col-md-offset-5 col-sm-7">
     <div class="input-group" id="adv-search">
-      <input type="text" class="form-control" placeholder="Search by NIC/ Pension number" />
+      <input type="text" class="form-control" placeholder="Search by NIC/ Pension number" [(ngModel)]="filterQuery"/>
       <div class="input-group-btn">
         <div class="btn-group" role="group">
           <button type="button" class="btn btn-primary">
@@ -13,35 +13,37 @@
   </div>
 </div><br>
 <div class="row">
-  <table class="table table-striped" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5">
+  <table class="table table-striped" [mfData]="pensionerList | pendingResultFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="10">
     <thead>
     <tr>
       <th style="width: 25%">
-        <mfDefaultSorter by="name">NIC</mfDefaultSorter>
+        <mfDefaultSorter by="nic">NIC</mfDefaultSorter>
       </th>
       <th style="width: 25%">
-        <mfDefaultSorter by="email">Pension Number</mfDefaultSorter>
+        <mfDefaultSorter by="pensionNumber">Pension Number</mfDefaultSorter>
       </th>
       <th style="width: 25%">
-        <mfDefaultSorter by="age">Name</mfDefaultSorter>
+        <mfDefaultSorter by="name">Name</mfDefaultSorter>
       </th>
       <th style="width: 25%">
-        <mfDefaultSorter by="city">Options</mfDefaultSorter>
+        <mfDefaultSorter></mfDefaultSorter>
       </th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let item of mf.data">
-      <td>{{item.name}}</td>
-      <td>{{item.email}}</td>
-      <td class="text-right">{{item.age}}</td>
-      <td>{{item.city | uppercase}}</td>
+    <tr *ngFor="let singleData of mf.data">
+      <td>{{singleData.nic}}</td>
+      <td>{{singleData.pensionNumber}}</td>
+      <td>{{singleData.name}}</td>
+      <td>
+        <button class="btn btn-primary" routerLink="/revision/modify">procdeed</button>
+      </td>
     </tr>
     </tbody>
     <tfoot>
     <tr>
       <td colspan="4">
-        <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+        <mfBootstrapPaginator></mfBootstrapPaginator>
       </td>
     </tr>
     </tfoot>

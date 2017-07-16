@@ -6,11 +6,11 @@ import 'rxjs/add/operator/map';
 import { BaseService } from '../app.base.service';
 import PensionserBaseInfoModel from '../../Models/app.model.data.store.pensioner.basic';
 import PensionerService from '../../Models/app.model.data.store.pensioner.service';
+
 @Injectable()
 export class PensionersInformationService {
   dummyPensionersList: Array<PensionserBaseInfoModel>;
   constructor(private baseService: BaseService) {
-    this.dummyPensionersList = new Array<PensionserBaseInfoModel>();
     this.generateDummyList();
   }
 
@@ -21,13 +21,13 @@ export class PensionersInformationService {
   }
 
   getAllPensionerList() {
-    const pensioners = this.dummyPensionersList;
     return new Promise((resolve, reject) => {
-      resolve(pensioners);
+      resolve(this.dummyPensionersList);
     });
   }
 
   generateDummyList() {
+    this.dummyPensionersList = new Array<PensionserBaseInfoModel>();
     const pensionerOne = new PensionserBaseInfoModel();
     const pensionerTwo = new PensionserBaseInfoModel();
     const pensionerServiceOne = new PensionerService();

@@ -1,7 +1,7 @@
 /**
  * Created by Amila on 6/20/2017.
  */
-import { Component } from '@angular/core';
+import { Component, Host } from '@angular/core';
 
 @Component({
   selector: 'app-personal',
@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.personalInformation.component.css']
 })
 export class PersonalInformationComponent {
-
+  
 }
