@@ -37,18 +37,32 @@ export class BaseService {
     this.validatePath(serverAddressType, dataReturened => {
       if (dataReturened && this.requestedServerType != null) {
         path = this.requestedServerType + path;
-        this.axios.get(path, {
+        if (params !== null) {
+          this.axios.get(path, {
             params: params,
             headers: {
               'session-key': store.EmployeeAuth.getToken
             }
           })
-          .then(response => {
-            return callback(response.data, null);
+            .then(response => {
+              return callback(response.data, null);
+            })
+            .catch(err => {
+              return callback(null, err);
+            });
+        } else if (params == null) {
+          this.axios.get(path, {
+            headers: {
+              'session-key': store.EmployeeAuth.getToken
+            }
           })
-          .catch(err => {
-            return callback(null, err);
-          });
+            .then(response => {
+              return callback(response.data, null);
+            })
+            .catch(err => {
+              return callback(null, err);
+            });
+        }
       }
     });
   }

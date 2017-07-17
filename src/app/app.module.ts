@@ -37,6 +37,7 @@ import { ServerAddresses } from './Models/app.model.data.serverAddresses';
 import { BaseService } from './Services/app.base.service';
 import { LoginService } from './Services/app.login.service';
 import { ToastMessagesService } from './Services/app.toast.messages.service';
+import { BankInformations } from './Services/BankInformationService/app.bank.information.service';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { ToastMessagesService } from './Services/app.toast.messages.service';
     ServerAddresses,
     BaseService,
     LoginService,
-    ToastMessagesService
+    ToastMessagesService,
+    BankInformations
   ],
   bootstrap: [AppComponent],
   exports: [

@@ -27,6 +27,8 @@ import { AppRoutes } from '../../Routes/app.routes.definition';
  */
 import { PensionersInformationService } from '../../Services/PensionersInformationServices/app.pensioners.information.service';
 import { ToastMessagesService } from '../../Services/app.toast.messages.service';
+import { BankInformations } from '../../Services/BankInformationService/app.bank.information.service';
+
 @NgModule({
   declarations: [
     PersonalInformationComponent,
@@ -45,7 +47,8 @@ import { ToastMessagesService } from '../../Services/app.toast.messages.service'
   ],
   providers: [
     PensionersInformationService,
-    ToastMessagesService
+    ToastMessagesService,
+    BankInformations
   ],
   bootstrap: [],
   exports: [
