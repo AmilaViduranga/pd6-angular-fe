@@ -15,6 +15,8 @@ import { ToastMessagesService } from '../../Services/app.toast.messages.service'
 export class LoginComponent {
   username: String;
   password: String;
+  noOne: number;
+  noTwo: number;
   constructor(private serviceApi: LoginService, private router: Router, private notificationService: ToastMessagesService) {
     this.password = null;
     this.username = null;

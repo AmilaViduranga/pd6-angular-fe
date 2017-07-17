@@ -1,74 +1,70 @@
 <form class="form-horizontal" role="form">
-  <div class="container">
-    <h3>Bank Information</h3>
-    <h4 class="col-sm-offset-1">For Pension</h4>
-
-    <div class="form-group">
-      <label class="control-label col-sm-3" for="bank">Bank Name</label>
-      <div class="col-sm-3">
-        <select class="form-control" >
-          <option value="0" disabled selected>Select Bank</option>                                          
-        </select>
+  <div class="row">
+      <h3>Bank Information</h3><br>
+      <h4 class="col-sm-offset-1">For Pension</h4>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="bank">Bank Name</label>
+        <div class="col-sm-3" *ngIf="bankList">
+          <select class="form-control" [(ngModel)]="bank" name="bank" (ngModelChange)="loadBranches($event)">
+            <option value="0" disabled selected>Select Bank</option>
+            <option *ngFor="let bank of bankList" value="{{bank.id}}">{{bank.name}}</option>
+          </select>
+        </div>
       </div>
-    </div>
-   
-    <div class="form-group">
-      <label class="control-label col-sm-3" for="branch">Branch</label>
-      <div class="col-sm-3">
-        <select class="form-control">
-          <option value="0" disabled selected>Select Branch</option>
-        </select>
+      <div class="form-group">
+        <label class="control-label col-sm-3" for="branch">Branch</label>
+        <div class="col-sm-3">
+          <select class="form-control" [(ngModel)]="branch" name="branch">
+            <option value="0" disabled selected>Select Branch</option>
+            <option *ngFor="let branch of branches" value="{{branch.id}}">{{branch.name}}</option>
+          </select>
+        </div>
       </div>
-    </div>
-
-    <div class="form-group">
-      <label for="bAccNo" class="control-label col-sm-3">Bank Account no</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" placeholder="Bank Account No.">
+      <div class="form-group">
+        <label for="bAccNo" class="control-label col-sm-3">Bank Account no</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" placeholder="Bank Account No.">
+        </div>
       </div>
-    </div>
-    
-    <div class="form-group">
-      <label for="bAccNoConf" class="control-label col-sm-3">Confirm Bank Account no</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" placeholder="Confirm Bank Account no">
+      <div class="form-group">
+        <label for="bAccNoConf" class="control-label col-sm-3">Confirm Bank Account no</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" placeholder="Confirm Bank Account no">
+        </div>
       </div>
-    </div>
-
+  </div>
+  <div class="row">
     <h4 class="col-sm-offset-1">For Gratuity</h4>
-
     <div class="form-group">
       <label class="control-label col-sm-3" for="bankGrat">Bank Name</label>
       <div class="col-sm-3">
-        <select class="form-control" >
+        <select class="form-control" [(ngModel)]="bankGratuty" name="bankGratuty" (ngModelChange)="loadBranchesGratuty($event)">
           <option value="0" disabled selected>Select Bank</option>
+          <option *ngFor="let bank of bankList" value="{{bank.id}}">{{bank.name}}</option>
         </select>
       </div>
     </div>
-    
     <div class="form-group">
       <label class="control-label col-sm-3" for="branchGrat">Branch</label>
       <div class="col-sm-3">
-        <select class="form-control">
+        <select class="form-control" [(ngModel)]="branchGratuty" name="branchGratuty">
           <option value="0" disabled selected>Select Branch</option>
+          <option *ngFor="let branch of branchesGratuty" value="{{branch.id}}">{{branch.name}}</option>
         </select>
       </div>
     </div>
-    
     <div class="form-group">
       <label for="bAccNoGrat" class="control-label col-sm-3">Bank Account No</label>
       <div class="col-sm-4">
         <input type="text" class="form-control" placeholder="Bank Account no" (keyup)="store.bankInformation.gratuityAccount = $event.srcElement.value">
       </div>
     </div>
-    
     <div class="form-group">
       <label for="bAccNoGratConf" class="control-label col-sm-3">Confirm Bank Account No</label>
       <div class="col-sm-4">
         <input type="text" class="form-control" placeholder="Confirm Bank Account no">
       </div>
     </div>
-   
     <div class="form-group">
       <div class="col-sm-3"></div>
       <div class="col-sm-4 align">
@@ -77,7 +73,6 @@
         <button type="button" class="btn btn-primary">Continue</button>
       </div>
     </div>
-
   </div>
 </form>
 
