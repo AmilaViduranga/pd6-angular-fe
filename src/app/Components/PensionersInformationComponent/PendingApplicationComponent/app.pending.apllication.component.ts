@@ -24,7 +24,7 @@ export class PendingApplicationPensionersComponent {
 
   constructor(service: PensionersInformationService) {
     this.service = service;
-    //this.loadPendingApplications();
+    this.loadPendingApplications();
   }
 
   /*

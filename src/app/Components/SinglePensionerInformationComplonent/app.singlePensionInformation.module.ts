@@ -1,6 +1,7 @@
 /**
  * Created by Amila on 6/20/2017.
  */
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -17,8 +18,15 @@ import { SalaryRevisionInformationComponent } from './SalaryRevisionInformationC
 import { PaymentInformationComponent  } from './PaymentInformationComponent/app.payment.information.component';
 
 /*
- * data models import
- **/
+ * routes registering
+ */
+import { AppRoutes } from '../../Routes/app.routes.definition';
+
+/*
+ * service registering
+ */
+import { PensionersInformationService } from '../../Services/PensionersInformationServices/app.pensioners.information.service';
+import { ToastMessagesService } from '../../Services/app.toast.messages.service';
 @NgModule({
   declarations: [
     PersonalInformationComponent,
@@ -32,13 +40,21 @@ import { PaymentInformationComponent  } from './PaymentInformationComponent/app.
     BrowserModule,
     FormsModule,
     HttpModule,
-    NgbModule
+    NgbModule,
+    RouterModule.forRoot(AppRoutes)
   ],
   providers: [
+    PensionersInformationService,
+    ToastMessagesService
   ],
   bootstrap: [],
   exports: [
-    StepperComponent
+    StepperComponent,
+    PersonalInformationComponent,
+    ServiceInformationComponent,
+    BankInformationComponent,
+    SalaryRevisionInformationComponent,
+    PaymentInformationComponent
   ]
 })
 export class SinglePensionInformationModule { }

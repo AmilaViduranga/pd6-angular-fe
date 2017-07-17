@@ -1,9 +1,15 @@
 .icon-sze{
-    font-size: 45px;
+  font-size: 45px;
 }
 
 .tabIndexes:hover {
-   color: #f1f1f1;
-   background-color: #3498db;
-   border-radius: 0px;
+  color: #f1f1f1;
+  background-color: #0072C6;
+  border-radius: 0px;
+}
+
+.active{
+  color: #f1f1f1;
+  background-color: #0072C6 !important;
+  border-radius: 0px !important;
 }
