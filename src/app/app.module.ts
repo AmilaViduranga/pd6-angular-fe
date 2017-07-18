@@ -14,6 +14,8 @@ import { PensionersInformationsModule } from './Components/PensionersInformation
 import { MobxAngularModule } from 'mobx-angular';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { CustomFormsModule } from 'ng2-validation';
+import {NgSpinningPreloader} from 'ng2-spinning-preloader';
+
 /*
  * component registering
  */
@@ -21,6 +23,7 @@ import { NavBarComponent } from './Components/NavigationBarComponent/app.navbar.
 import { DashboardComponent } from './Components/DashBoardComponent/app.dashboard.component';
 import { LocationNavigatorComponent } from './Components/DashBoardComponent/LocationNavigatorComponent/app.locationNavigator.component';
 import { LoginComponent } from './Components/LoginComponent/app.login.component';
+import { PreloaderComponent } from './Components/PreLoader/app.preloader.component';
 /*
  * import routes
  */
@@ -44,7 +47,8 @@ import { ToastMessagesService } from './Services/app.toast.messages.service';
     NavBarComponent,
     DashboardComponent,
     LocationNavigatorComponent,
-    LoginComponent
+    LoginComponent,
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +67,8 @@ import { ToastMessagesService } from './Services/app.toast.messages.service';
     ServerAddresses,
     BaseService,
     LoginService,
-    ToastMessagesService
+    ToastMessagesService,
+    NgSpinningPreloader 
   ],
   bootstrap: [AppComponent],
   exports: [
