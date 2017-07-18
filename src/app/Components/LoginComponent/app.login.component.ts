@@ -31,23 +31,35 @@ export class LoginComponent {
       'password': this.password
     };
     if (loginInstance.username != null && loginInstance.password != null) {
-      this.serviceApi.loginToRevisionSystem(loginInstance, (resultRev, errRev) => {
-        if (resultRev !== null && resultRev.status === 200) {
-          this.serviceApi.loginToLiveSystem(loginInstance, (resultLive, errLive) => {
-            if (resultLive !== null && resultLive.status === 200) {
-              store.EmployeeAuth.setUsername(resultLive.data.username);
-              store.EmployeeAuth.setToken(resultLive.data.sessionId);
-              store.EmployeeAuth.setUserRole(resultLive.data.role);
-              localStorage.setItem('token', resultLive.data.sessionId);
-              localStorage.setItem('userName', resultLive.data.username);
-              this.router.navigateByUrl('/dashboard');
-            } else if (errLive.response.status === 401) {
-              this.notificationService.errorMessage('Invalid Login', 'Provide correct password, username to login');
-            }
-          });
-        } else if (errRev.response.status === 401) {
-          this.notificationService.errorMessage('Invalid Login', 'Provide correct password, username to login');
+      // this.serviceApi.loginToRevisionSystem(loginInstance, (resultRev, errRev) => {
+        // if (resultRev !== null && resultRev.status === 200) {
+        //   this.serviceApi.loginToLiveSystem(loginInstance, (resultLive, errLive) => {
+        //     if (resultLive !== null && resultLive.status === 200) {
+        //       store.EmployeeAuth.setUsername(resultLive.data.username);
+        //       store.EmployeeAuth.setToken(resultLive.data.sessionId);
+        //       store.EmployeeAuth.setUserRole(resultLive.data.role);
+        //       localStorage.setItem('token', resultLive.data.sessionId);
+        //       localStorage.setItem('userName', resultLive.data.username);
+        //       this.router.navigateByUrl('/dashboard');
+        //     } else if (errLive.response.status === 401) {
+        //       this.notificationService.errorMessage('Invalid Login', 'Provide correct password, username to login');
+        //     }
+        //   });
+        // } else if (errRev.response.status === 401) {
+        //   this.notificationService.errorMessage('Invalid Login', 'Provide correct password, username to login');
+        // }
+      // });
+      this.serviceApi.loginToLiveSystem(loginInstance).then(result => {
+        if (result !== null && result['data'].state === 200) {
+          store.EmployeeAuth.setUsername(result['data'].username);
+          store.EmployeeAuth.setToken(result['data'].sessionId);
+          store.EmployeeAuth.setUserRole(result['data'].role);
+          localStorage.setItem('token', result['data'].sessionId);
+          localStorage.setItem('userName', result['data'].username);
+          this.router.navigateByUrl('/dashboard');
         }
+      }, error => {
+        this.notificationService.errorMessage('Invalid Login', 'Provide correct password, username to login');
       });
     }
   }
